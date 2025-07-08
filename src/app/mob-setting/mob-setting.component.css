@@ -1,0 +1,184 @@
+.side-content h3 {
+    padding: 0 1.8666666667vw;
+    justify-content: space-between;
+    align-items: center;
+}
+h3 {
+    background-image: linear-gradient(-180deg, #2e4b5e 0%, #243a48 82%) !important;
+    color: #fff !important;
+    font-size: 3.7333333333vw;
+    line-height: 2.2;
+    text-align: center;
+}
+* {
+    margin: 0;
+    /* padding: 0; */
+}
+.side-content h3{
+  display: flex;
+}
+.setting-block{
+    display: flex;
+    font-size: 4vw;
+    color: #243a48;
+    border-bottom: 1px solid #e0e6e6;
+    padding: 1.8666666667vw 0 0 1.8666666667vw;
+    flex-wrap: wrap;
+}
+.stake-setting dt {
+    flex: 1 1 100% !important;
+}
+.setting-block dt, .setting-block dd{
+    flex: 1;
+    padding: 0 1.8666666667vw 1.8666666667vw 0;
+    align-items: center;
+}
+.setting-block input {
+    width: 26.6666666667vw;
+    margin: 0 0 0 1.3333333333vw;
+}
+.stake-setting dd {
+    flex: 1 1 25%;
+}
+
+.setting-block dd {
+    flex: 1;
+    padding: 0 1.8666666667vw 1.8666666667vw 0;
+    align-items: center;
+}
+
+.setting-block dd {
+  box-sizing: border-box;
+}
+.setting-block dd{
+
+  flex: 1;
+  line-height: 2.2;
+}
+.btn{
+  text-align:center;
+}
+
+
+.setting-block dt, .setting-block dd {
+    flex: 1;
+    padding: 0 1.8666666667vw 1.8666666667vw 0;
+    align-items: center;
+}
+.switch_on, .switch_off {
+  display: block;
+    position: relative;
+    width: 9.3333333333vw;
+    height: 9.3333333333vw;
+    background: #6bbd11;
+    box-shadow: inset 0 .2666666667vw .8vw #00000080;
+    border-radius: 1.6vw;
+    overflow: hidden;
+}
+.switch_on span:after, .switch_off span:after
+ {
+    content: "";
+    width: 1.0666666667vw;
+    height: 1.3333333333vw;
+    background: #e0e6e6;
+    box-shadow: inset 0 .2666666667vw .2666666667vw #00000042;
+    border-radius: .5333333333vw;
+}
+
+.switch_on span:after {
+  display: block;
+}
+
+.btn-list li:nth-child(1) {
+    flex: 1;
+}
+
+.btn-list li {
+    flex: 1 1 auto;
+    margin: 1.6vw .8vw 0;
+    overflow: hidden;
+}
+.btn-list li:nth-child(2) {
+    flex: 1;
+}
+
+.setting-block dt, .setting-block dd {
+    flex: 1 1 25%;
+    padding: 0 1.8666666667vw 1.8666666667vw 0;
+    align-items: center;
+}
+
+.setting-block {
+    font-size: 4vw;
+    color: #243a48;
+    border-bottom: 1px solid #e0e6e6;
+    padding: 1.8666666667vw 0 0 1.8666666667vw;
+    flex-wrap: wrap;
+}
+
+/*
+.setting-block dt{
+
+
+} */
+
+.btn-edit:after {
+    display: inline-block;
+    content: "";
+    width: 4vw;
+    height: 4vw;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13"><path fill="rgb(59,81,96)" fill-rule="evenodd" d="M3.115 11.902l.78-.78L1.88 9.103l-.782.78v.92h1.1V11.9h.917zM7.603 3.94c0-.113-.078-.19-.19-.19-.05 0-.102.017-.145.06l-4.65 4.65c-.044.044-.06.095-.06.147 0 .11.076.188.188.188.05 0 .103-.017.146-.06l4.65-4.65c.043-.043.06-.095.06-.146zM7.14 2.29l3.57 3.57L3.57 13H0V9.43l7.14-7.14zm5.86.825c0 .292-.12.575-.317.772l-1.425 1.425-3.57-3.57L9.113.326C9.31.12 9.593 0 9.885 0c.292 0 .575.12.78.326l2.018 2.008c.197.206.317.49.317.78z"/></svg>') no-repeat;
+    background-size: contain;
+    vertical-align: top;
+    margin-top: 2.6666666667vw;
+    margin-left: 1.3333333333vw;
+}
+.col-stake_edit a {
+  display: block;
+  text-align: center;
+    width: 100%;
+    line-height: 2.6;
+    font-weight: 700;
+}
+
+.btn-edit {
+    color: #243a48;
+    background: rgba(197, 208, 215, .4);
+    border: .2666666667vw solid #7e97a7;
+    box-shadow: inset 0 .5333333333vw #fffc;
+    border-radius: 1.6vw;
+}
+
+a{
+    text-decoration: none;
+    /* color: #2789ce; */
+    outline: none;
+    -webkit-tap-highlight-color: rgba(182, 223, 253, .5);
+}
+.menu a, .setting-wrap a {
+    position: relative;
+}
+
+.btn-list {
+  display: flex;
+  padding: 0 1.6vw 2.6666666667vw;
+  flex-wrap: wrap;
+}
+
+
+.switch_on span, .switch_off span {
+    position: absolute;
+    right: 1.0666666667vw;
+    top: 1.0666666667vw;
+    width: 2.6666666667vw;
+    height: 7.2vw;
+    background: #fff;
+    box-shadow: 0 .5333333333vw 1.0666666667vw #00000080, inset 0 -.8vw #cad5d5;
+    border-radius: 1.0666666667vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch_on span{
+  display: flex;
+}

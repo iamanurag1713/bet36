@@ -1,0 +1,119 @@
+.path-wrap {
+    background-color: #1e1e1e;
+    color: #fff;
+    font-weight: 700;
+    line-height: 10.6666666667vw;
+}
+
+.account-id:before {
+    content: "";
+    width: 5.3333333333vw;
+    height: 5.3333333333vw;
+    margin-right: 1.3333333333vw;
+    background-size: contain;
+}
+.icon-account, .account-id:before {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='white' fill-rule='evenodd' d='M10 0c2.756 0 5.112.978 7.067 2.933C19.022 4.888 20 7.243 20 10c0 2.756-.978 5.112-2.933 7.067C15.112 19.022 12.757 20 10 20c-2.756 0-5.112-.978-7.067-2.933C.978 15.112 0 12.757 0 10c0-2.756.978-5.112 2.933-7.067C4.888.978 7.243 0 10 0zm0 19.183c2.82 0 5.16-1.106 7.02-3.318-1.38-.544-2.87-1.057-4.472-1.538-.096-.064-.144-.24-.144-.53 0-.223.112-.592.336-1.105.16-.32.305-.833.433-1.538.32-.385.545-.898.673-1.54.096-.576.096-1.024 0-1.345-.032-.033-.048-.065-.048-.097-.096-.32-.048-.93.144-1.827.16-.833-.08-1.667-.72-2.5-.61-.833-1.54-1.282-2.79-1.346h-.865c-1.25.096-2.18.545-2.788 1.346-.642.833-.883 1.667-.722 2.5.192.898.24 1.507.144 1.827v.096c-.128.384-.144.833-.048 1.345.16.673.384 1.202.673 1.587.128.64.272 1.138.433 1.49.128.257.192.64.192 1.154 0 .257-.048.417-.144.48-1.603.45-3.045.962-4.327 1.54 1.828 2.21 4.167 3.317 7.02 3.317z'/%3E%3C/svg%3E") no-repeat;
+}
+
+.menu-list, .upcoming-list, .highlight-list, .inplay-list{
+    background-color: #fff;
+    border-bottom: .2666666667vw solid #7e97a7;
+    margin-bottom: 5.3333333333vw;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.menu-list li, .upcoming-list li, .highlight-list li, .inplay-list li {
+    border-bottom: 1px solid #e0e6e6;
+    list-style: none;
+    align-items: center;
+}
+
+
+.menu-list a {
+    align-items: center;
+}
+
+.menu-list a, .upcoming-list a, .highlight-list a, .inplay-list a {
+    flex: 1;
+    position: relative;
+    font-size: 4vw;
+    font-weight: 700;
+    line-height: 1.6;
+    padding: 2.1333333333vw 9.0666666667vw 2.1333333333vw 2.6666666667vw;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.logout {
+    height: 12.8vw;
+    background-image: linear-gradient(-180deg, #e93522 0%, #be2414 100%);
+    border: 1px solid #8a0011;
+    border-width: 1px 0 1px 0;
+    color: #fff;
+    font-size: 4.2666666667vw;
+    font-weight: 700;
+    margin-bottom: 5.3333333333vw;
+    justify-content: center;
+    align-items: center;
+}
+.logout:after {
+    content: "";
+    width: 4vw;
+    height: 4vw;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><path fill="rgb(255,255,255)" fill-rule="evenodd" d="M5.672 11.238l2.066-2.355H0V7.117h7.776L5.672 4.762 6.8 3.5 10.82 8 6.8 12.5 5.67 11.238zM13.348 0c.435 0 .82.17 1.153.508.334.338.5.73.5 1.172v11.64c0 .443-.166.834-.5 1.172-.332.34-.717.508-1.152.508H1.898c-.434 0-.818-.17-1.15-.508-.334-.338-.5-.73-.5-1.172V10h1.65v3.32h11.45V1.68H1.898V5H.25V1.68c0-.443.166-.834.5-1.172C1.08.168 1.463 0 1.897 0h11.45z"/></svg>') no-repeat;
+    background-size: contain;
+    margin-left: 1.3333333333vw;
+}
+
+.menu-list a:after, .upcoming-list a:after, .highlight-list a:after, .inplay-list a:after {
+    position: absolute;
+    top: 1.8666666667vw;
+    right: 2.6666666667vw;
+    content: "";
+    width: 6.4vw;
+    height: 6.4vw;
+    background: #fff url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="rgb(30,30,30)" fill-rule="evenodd" d="M9.718 5L17 12l-7.282 7L8 17.348 13.592 12 8 6.652"/></svg>') no-repeat;
+    background-size: contain;
+    border: 1px solid #e0e6e6;
+    border-radius: 1.0666666667vw;
+}
+
+ .logout {
+    display: flex
+;
+}
+
+a {
+    text-decoration: none;
+    color: #2789ce;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(182, 223, 253, .5);
+}
+
+.account-id {
+  display: flex;
+    width: 100%;
+    padding-left: 1.8666666667vw;
+    align-items: center;
+}
+
+
+.account-id .time-zone {
+    flex: 0 0 auto;
+    min-width: 17.3333333333vw;
+    border-left: 1px solid #4b4b4b;
+    padding: 0 1.8666666667vw;
+    margin-left: 1.8666666667vw;
+}
+
+.account-id span {
+    flex: 1;
+}
+.path-wrap{
+  display: flex;
+}

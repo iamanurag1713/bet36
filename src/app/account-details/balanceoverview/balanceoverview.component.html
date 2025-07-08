@@ -1,0 +1,90 @@
+
+  <div  class="parent">
+    <div  class="main_wrap">
+
+        <div  class="col-left">
+          <div  class="sub_path">
+            <div  class="path"><a routerLink="#path-pop"
+                class="path-back">...</a>
+              <ul >
+                <li  class="path-last"><a routerLink="#">My Account
+                  </a></li>
+              </ul>
+            </div>
+            <ul  id="path-pop" class="path-pop"></ul>
+            <ul  class="menu-list">
+              <li ><a  id="sub_menu_detail"
+                  routerlinkactive="select"routerLink="/myAccount/my-profile">My Profile </a></li>
+              <li ><a  id="sub_menu_summary"
+                  routerlinkactive="select"routerLink="/myAccount/balance-overview" class="select">Balance Overview </a></li>
+              <li ><a  id="sub_menu_accountCashStatement_log"
+                  routerlinkactive="select"routerLink="/myAccount/account-statement">Account Statement </a></li>
+              <li ><a  id="sub_menu_my_bets"
+                  routerlinkactive="select"routerLink="/myAccount/mybet">My Bets </a></li>
+              <li ><a  id="sub_menu_my_bets"
+                  routerlinkactive="select"routerLink="/myAccount/bet-history/Odds">Bets History </a></li>
+              <li ><a  id="sub_menu_my_bets"
+                  routerlinkactive="select"routerLink="/myAccount/profit-loss/Odds">Profit &amp; Loss </a></li>
+              <li ><a  id="sub_menu_activity_log"
+                  routerlinkactive="select"routerLink="/myAccount/checkresults">Results </a></li>
+              <li ><a  id="sub_menu_activity_log"
+                  routerlinkactive="select"routerLink="/myAccount/activity-log">Activity Log </a></li>
+            </ul>
+          </div>
+        </div>
+
+      <div  class="col-center report">
+        <h2 >Summary</h2>
+        <div  class="white-wrap">
+          <dl  class="head-balance">
+            <dt >Your Balances</dt>
+            <dd  id="summaryTotalBalance">{{ balance }}<span >USD</span>
+            </dd>
+          </dl>
+          <h3 >Welcome,</h3>
+          <p >View your account details here. You can manage funds, review and change your
+            settings and see the performance of your betting activity. </p>
+        </div>
+        <table  class="table01">
+          <tbody >
+            <tr >
+              <th  width="13%" class="align-L">Date </th>
+              <th  width="13%">Transaction № </th>
+              <th  width="13%">Debits </th>
+              <th  width="13%">Credits </th>
+              <th  width="13%">Balance </th>
+              <th  width="14%">Remarks </th>
+              <th >From/To </th>
+            </tr>
+            <tr  id="dataTemplate" style="display: none;">
+              <td  id="date" class="align-L"></td>
+              <td  id="statementSerial"></td>
+              <td  id="debits"></td>
+              <td  id="credits"></td>
+              <td  id="balance"></td>
+              <td  id="remarks"></td>
+              <td  id="fromTo"><img
+                  src="../../../assets/images/loading40.gif" class="fromto"></td>
+            </tr>
+          </tbody>
+          <tbody  id="content"></tbody>
+        </table>
+        <div >
+          <ul  style="display: none;">
+            <li  id="prev"><a routerLink="javascript:void(0);">Prev
+              </a></li>
+            <li  id="next"><a routerLink="javascript:void(0);">Next
+              </a></li>
+            <li  id="pageNumber"><a
+               routerLink="javascript:void(0);"></a></li>
+            <li  id="more"><a
+               routerLink="javascript:void(0);">...</a></li><input  type="text"
+              id="goToPageNumber" onkeyup="return PageHandler.validatePageNumber(this)" maxlength="6" size="4">
+            <li ><a  id="goPageBtn">GO</a></li>
+          </ul>
+          <ul  id="pageNumberContent" class="pages"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+

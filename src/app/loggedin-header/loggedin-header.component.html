@@ -1,0 +1,96 @@
+<header class="header2"
+  style="background-image: linear-gradient(-180deg, rgb(65, 65, 65) 0%, rgb(0, 0, 0) 100%) !important;">
+  <ul id="afterLoggedIn">
+    <li class="li-tv_bet"><!----><a id="openBetsBtn" routerlink="/mob-bets" class="a-open_bets ui-link"
+        routerLink="/mob-bets" style="background: rgb(56, 56, 56); color: rgb(255, 178, 0);"><img
+          src="../../../assets/images/transparenthead.gif" style="filter: inherit;">Bets</a></li>
+    <li class="main-wallet"><a id="multiWallet" routerLink="#" class="a-wallet ui-link"
+        style="background: rgb(56, 56, 56); color: rgb(255, 178, 0);">
+        <ul id="accountCredit">
+          <li><span>Main</span><span id="betCredit"> USD {{ balance }}</span></li>
+          <li><span>Exposure</span><span id="totalExposure" class="mexpo">{{ exposure }}</span></li>
+          <li class="nums">+<span id="vendorQuantity">5</span>
+          </li>
+        </ul><!----><!---->
+      </a>
+      <a id="menuRefresh" title="Refresh Main Wallet" class="a-refresh"
+        style="background: rgb(56, 56, 56); color: rgb(255, 255, 255);">
+        <img
+          src="../../../../assets/images/transparent.gif" style="filter: inherit;"></a></li>
+    <li><a routerlink="/mob-setting" title="Setting" class="a-setting ui-link" routerLink="/mob-setting"
+        style="background: rgb(56, 56, 56);"><img src="../../../../assets/images/transparent.gif"
+          style="filter: inherit;"></a></li>
+  </ul>
+  <div id="msgBox" class="message-wrap success to-open_bets" style="display: none;">
+    <div class="message">
+      <h4 id="header">Bet Matched</h4>
+      <p id="info"><span id="sideType" class="back">Back</span><strong id="selectionName">England</strong><strong
+          id="stake">$1,000</strong> at odds <strong id="odds">1.29</strong></p>
+    </div><a id="close" routerLink="#" class="close ui-link">Close</a>
+  </div>
+  <div id="multiWalletDiv" class="overlay" style="display: none;">
+    <div class="wallet-detail">
+      <div class="wallet-detail-group">
+        <dl class="wallet-detail-content">
+          <dt>Main Balance</dt>
+          <dd class="wallet-balance-num"><span id="currency" class="badge-currency">USD</span><span
+              id="mainBalance">18.50</span></dd>
+          <dd class="wallet-exposure">Exposure <span id="mainExposure">0.00</span></dd>
+        </dl>
+      </div>
+      <div id="walletContent" class="wallet-detail-group"></div>
+      <div id="walletTemp" class="wallet-detail-group" style="display: none;">
+        <dl id="tempDl" class="wallet-detail-content">
+          <dt id="vendorTitle">Housie Balance</dt>
+          <dd class="wallet-balance-num"><span id="vendorCurrency" class="badge-currency">USD</span><span
+              id="vendorBalance">$ 0.00</span></dd>
+          <dd class="wallet-recall"><button id="recall"
+              class="btn-recall ui-btn ui-shadow ui-corner-all">Recall</button></dd>
+        </dl>
+        <dl id="recallAllDl" class="wallet-detail-content">
+          <dd class="align-R"><button id="recallAll" class="btn-recall ui-btn ui-shadow ui-corner-all">Recall
+              All</button></dd>
+        </dl>
+      </div>
+      <div class="btn-box"><button id="balanceClose" class="btn ui-btn ui-shadow ui-corner-all">Close</button></div>
+    </div>
+  </div>
+</header>
+
+
+<div class="marquee-box" style="display: flex;">
+  <h4>News</h4>
+  <div class="marquee">
+    <!-- <marquee direction="left" loop="infinite" scrollamount="4">
+      <div class="js-marquee-wrapper" style="width: 1000px;">
+        <div class="js-marquee"><a style="color: rgb(255, 178, 0);"><span>17 Jun 2025</span>Notice : Fancy has
+            been Suspend for Matchname:- Texas Super Kings v Seattle Orcas,FancyName:- 1st innings - Salamkheil, Waqar
+            dismissal method, Reason;-Wrong Market</a></div>
+        <div class="js-marquee"><a style="color: rgb(255, 178, 0);"><span>17 Jun 2025</span>Notice : Fancy has
+            been Suspend for Matchname:- Texas Super Kings v Seattle Orcas,FancyName:- 1st innings - Texas Super Kings
+            7th dismissal method (extended), Reason;-Wrong Market</a></div>
+        <div class="js-marquee"><a style="color: rgb(255, 178, 0);"><span>17 Jun 2025</span>Notice : Fancy has
+            been Suspend for Matchname:- Scarlet Ibis Scorchers v Blue Devils,FancyName:- 1st innings over 9 - Blue
+            Devils odd/even, Reason;-Didn't Open</a></div>
+        <div class="js-marquee"><a style="color: rgb(255, 178, 0);"><span>14 Jun 2025</span>Notice : BETS VOIDMi
+            New York v Texas Super Kings16 Over TSK 146-147ALL BETS VOIDEDDUE TO WRONG RATESORRY FOR DELAY</a></div>
+
+      </div>
+    </marquee> -->
+
+    <div *ngIf="messages.length === 0">
+  No messages available.
+</div>
+    <marquee  *ngIf="messages.length > 0" direction="left" loop="infinite" scrollamount="4">
+  <div class="js-marquee-wrapper" style="width: 1000px;">
+    <div class="js-marquee" *ngFor="let msg of messages">
+      <a style="color: rgb(255, 178, 0);">
+        <span>{{ msg.date || (msg.opendate | date: 'dd MMM yyyy') }}</span>
+        {{ formatMessage(msg) }}
+      </a>
+    </div>
+  </div>
+</marquee>
+
+  </div>
+</div><!---->

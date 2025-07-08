@@ -1,0 +1,79 @@
+
+  <div  id="settingDiv" class="overlay right-side" style="display: flex;">
+    <div  id="settingSlide" class="side-wrap setting-wrap">
+      <div  class="side-head">
+        <h3  class="a-setting"><img
+            src="../../../../assets/images/transparent.gif">Setting </h3><a
+          routerlink="/home" id="settingClose" class="close ui-link" routerLink="/home"></a>
+      </div>
+      <div  id="coinList" class="side-content">
+        <h3 >Stake </h3>
+        <dl  class="setting-block">
+          <dt >Default stake<input  type="number" id="userCoin"
+              value="" pattern="[0-9]*" data-role="none" fdprocessedid="jkcjl"></dt>
+        </dl>
+        <dl  id="stakeSet" class="setting-block stake-setting">
+          <dt >Quick Stakes </dt>
+          <dd ><a  id="coin_1" class="btn ui-link select"
+              style="color: rgb(255, 178, 0);">10</a></dd>
+          <dd ><a  id="coin_2" class="btn ui-link select"
+              style="color: rgb(255, 178, 0);">30</a></dd>
+          <dd ><a  id="coin_3" class="btn ui-link select"
+              style="color: rgb(255, 178, 0);">50</a></dd>
+          <dd ><a  id="coin_4" class="btn ui-link"
+              style="color: rgb(255, 178, 0);">100</a></dd>
+          <dd ><a  id="coin_5" class="btn ui-link select"
+              style="color: rgb(255, 178, 0);">200</a></dd>
+          <dd ><a  id="coin_6" class="btn ui-link"
+              style="color: rgb(255, 178, 0);">500</a></dd>
+          <dd ><a  id="coin_7" class="btn ui-link select"
+              style="color: rgb(255, 178, 0);">1000</a></dd>
+          <dd ><a  id="coin_8" class="btn ui-link select"
+              style="color: rgb(255, 178, 0);">2000</a></dd>
+          <dd  class="col-stake_edit"><a  id="edit"
+              class="btn-edit ui-link">Edit Stakes </a></dd>
+        </dl><!---->
+        <form  novalidate="" class="ng-untouched ng-pristine ng-valid"><!----></form>
+        <h3 >Odds </h3>
+        <dl  class="setting-block">
+          <dt >Highlight when odds change </dt>
+          <dd ><a  id="enableSparkCheck"
+              class="switch_on"><input  type="hidden" id="sparkValue" value="1"><span
+                ></span></a></dd>
+        </dl>
+        <h3 >FancyBet </h3>
+        <dl  class="setting-block">
+          <dt >Accept Any Odds </dt>
+          <dd ><a  id="fancyBetAcceptAnyOddsCheckBox"
+              class="switch_on"><span ></span></a></dd>
+        </dl>
+        <h3 >SportsBook </h3>
+        <dl  class="setting-block">
+          <dt >Accept Any Odds </dt>
+          <dd ><a  id="sportsBookAcceptAnyOddsCheckBox"
+              class="switch_on"><span ></span></a></dd>
+        </dl>
+        <h3 >Binary </h3>
+        <dl  class="setting-block">
+          <dt >Accept Any Price </dt>
+          <dd ><a  id="financialAcceptAnyOddsCheckBox"
+              class="switch_on"><span ></span></a></dd>
+        </dl>
+        <h3  style="display: none;">Win Selection forecast</h3>
+        <dl  class="setting-block" style="display: none;">
+          <dt >With Commission</dt>
+          <dd ><a  id="withCommCheckBox"
+              class="switch_off"><span ></span></a></dd>
+        </dl>
+        <ul  class="btn-list">
+          <li ><a  routerlink="/home" id="settingCancel"
+              class="btn ui-link" routerLink="/home">Cancel </a></li>
+          <li ><a  routerlink="/home" id="settingSave"
+              class="btn-send ui-link" routerLink="/home"
+              style="background-image: linear-gradient(-180deg, rgb(247, 36, 36) 0%, rgb(187, 28, 0) 100%); color: rgb(255, 255, 255);">Save
+            </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+

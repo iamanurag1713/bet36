@@ -1,0 +1,86 @@
+<div class="mian-wrap"><!---->
+  <div class="tab-wrap marq-space">
+    <ul>
+      <li id="inplay"><a neua="In-Play" routerLink="/mob-inplay">In-Play</a></li>
+      <li id="today" class="select"><a routerLink="/mob-inplay/today">Today</a></li>
+      <li id="tomorrow"><a routerLink="/mob-inplay/tomorrow">Tomorrow</a></li>
+     <li [class.select]="activeTab === 'result'" (click)="setActive('result'); handleResultClick()">
+          <a class="ui-link">
+            <img src="../../../assets/images/transparentsports.gif" class="icon-cricket">Result
+          </a>
+        </li>
+
+    </ul>
+  </div>
+  <div id="inPlayData" class="wrap-highlight_list">
+    <div id="inPlayEventType_4" style="display: block;">
+      <h3 class="myHead"
+        style="background-image: linear-gradient(-180deg, rgb(46, 75, 94) 0%, rgb(36, 58, 72) 82%); color: rgb(255, 255, 255);">
+        Cricket</h3>
+      <ul id="inPlayList_4" class="highlight-list">
+        <li class="inplay-off" *ngFor="let game of cricketGames">
+          <a  [routerLink]="['/match', game.eventid]">
+            <dl>
+              <dt>
+                <span class="game-fancy" style="display: flex;">Fancy</span>
+                <span class="game-bookmaker" style="display: flex;">BookMaker</span>
+                <span class="time">{{ game.time }}</span>
+              </dt>
+              <dd id="eventName">{{ game.matchname }}</dd>
+            </dl>
+          </a>
+          <a routerLink="/mob-login" class="add-pin pin-off"></a>
+        </li>
+
+      </ul>
+    </div><!---->
+    <div id="inplayVirtualCricketImage" class="footer-kv"><a id="inplayVirtualCricketEntrance"
+        routerLink="javascript:CommonTransferWalletHandler.openDepositPage('1', 'BetRadar', 'SPORTRADAR', '', 'SPORTRADAR_VIRTUAL_001', '', true)"
+        neua="BetRadar Banner" class="entrance" style="cursor: pointer;"><img
+          src="../../../../assets/images/mobile/promo/kv-virtual-cricket-m.jpg" alt="" draggable="false"
+          style="width: 100%;"></a></div>
+    <div id="inPlayEventType_1" style="display: block;">
+      <h3 class="myHead"
+        style="background-image: linear-gradient(-180deg, rgb(46, 75, 94) 0%, rgb(36, 58, 72) 82%); color: rgb(255, 255, 255);">
+        Soccer</h3>
+      <ul id="inPlayList_1" class="highlight-list">
+
+        <li class="inplay-off" *ngFor="let game of soccerGames">
+          <a [routerLink]="['/match', game.eventid]">
+            <dl>
+              <dt>
+                <span class="game-fancy" style="display: flex;">Fancy</span>
+                <span class="game-bookmaker" style="display: flex;">BookMaker</span>
+                <span class="time">{{ game.time }}</span>
+              </dt>
+              <dd id="eventName">{{ game.matchname }}</dd>
+            </dl>
+          </a>
+          <a routerLink="/mob-login" class="add-pin pin-off"></a>
+        </li>
+
+      </ul>
+    </div><!---->
+    <div id="inPlayEventType_2" style="display: block; margin-bottom: 100px;">
+      <h3 class="myHead"
+        style="background-image: linear-gradient(-180deg, rgb(46, 75, 94) 0%, rgb(36, 58, 72) 82%); color: rgb(255, 255, 255);">
+        Tennis</h3>
+      <ul id="inPlayList_2" class="highlight-list">
+
+
+        <li class="inplay-off" *ngFor="let game of tennisGames">
+          <a [routerLink]="['/match', game.eventid]">
+            <dl>
+              <dt>
+                <span class="game-sportsbook" style="display: flex;">Tennis Premium</span>
+                <span class="time">{{ game.time }}</span>
+              </dt>
+              <dd id="eventName">{{ game.matchname }}</dd>
+            </dl>
+          </a>
+          <a routerLink="/mob-login" class="add-pin pin-off"></a>
+        </li>
+      </ul>
+    </div><!---->
+  </div>
+</div><!---->

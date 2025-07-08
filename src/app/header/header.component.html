@@ -1,0 +1,29 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+<header *ngIf="!auth.isLoggedIn" class="mob-header" style="background-image: linear-gradient(-180deg, rgb(65, 65, 65) 0%, rgb(0, 0, 0) 100%)">
+
+  <h1  routerlink="/home" class="top-logo" tabindex="0"
+    style="background-image: url(&quot;https://imagedelivery.net/I9sos4ch_2vM7bVAQ311tg/-asdbet36-158x53%202.svg/Logo?v=0.29&quot;);">
+  </h1><a  id="signupButton" target="_blank" class="btn-signup ui-link"
+    routerLink="https://bet36aglist.com"
+    style="color: rgb(255, 255, 255); background-image: linear-gradient(-180deg, rgb(102, 102, 102) 0%, rgb(51, 51, 51) 100%);">Sign
+    up</a><!----><a  routerlink="/mob-login" class="login-index ui-link" routerLink="/mob-login"
+    style="background-image: linear-gradient(-180deg, rgb(247, 36, 36) 0%, rgb(187, 28, 0) 100%); color: rgb(255, 255, 255);"><i
+       class="fa fa-user usericn"></i>Login</a>
+</header>
+
+
+<header *ngIf="auth.isLoggedIn" class="mob-header" style="background-image: linear-gradient(to right, rgb(34, 93, 104), rgb(2, 55, 59))">
+  <h1 routerLink="/home" class="top-logo" style="background-image: url('...');"></h1>
+
+  <a class="btn-signup ui-link" routerLink="/account-details">
+    <i class="fa fa-user-circle"></i> Account
+  </a>
+
+  <a class="btn-signup ui-link" (click)="logout()">
+    Logout
+  </a>
+</header>

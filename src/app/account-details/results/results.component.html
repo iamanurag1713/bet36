@@ -1,0 +1,107 @@
+<div class="parent">
+  <div class="main_wrap">
+
+    <div class="col-left">
+      <div class="sub_path">
+        <div class="path"><a routerLink="#path-pop" class="path-back">...</a>
+          <ul >
+            <li class="path-last"><a routerLink="#">My Account
+              </a></li>
+          </ul>
+        </div>
+        <ul id="path-pop" class="path-pop"></ul>
+        <ul class="menu-list">
+          <li ><a id="sub_menu_detail" routerlinkactive="select"
+              routerLink="/myAccount/my-profile">My Profile </a></li>
+          <li ><a id="sub_menu_summary" routerlinkactive="select"
+              routerLink="/myAccount/balance-overview">Balance Overview </a></li>
+          <li ><a id="sub_menu_accountCashStatement_log" routerlinkactive="select"
+              routerLink="/myAccount/account-statement">Account Statement </a></li>
+          <li ><a id="sub_menu_my_bets" routerlinkactive="select"
+              routerLink="/myAccount/mybet">My Bets </a></li>
+          <li ><a id="sub_menu_my_bets" routerlinkactive="select"
+              routerLink="/myAccount/bet-history/Odds">Bets History </a></li>
+          <li ><a id="sub_menu_my_bets" routerlinkactive="select"
+              routerLink="/myAccount/profit-loss/Odds">Profit &amp; Loss </a></li>
+          <li ><a id="sub_menu_activity_log" routerlinkactive="select"
+              routerLink="/myAccount/checkresults" class="select">Results </a></li>
+          <li ><a id="sub_menu_activity_log" routerlinkactive="select"
+              routerLink="/myAccount/activity-log">Activity Log </a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-center report">
+      <h2 class="act-details">Check Result </h2>
+      <div class="function-wrap">
+        <ul class="input-list">
+          <li><label>Period</label></li>
+
+          <li><input id="betsstartDate" [(ngModel)]="startDate" type="datetime-local" placeholder="YYYY-MM-DD"
+              class="cal-input" style="width: 150px; padding: 6px !important;"> to <input id="betsendDate"
+              [(ngModel)]="endDate" type="datetime-local" placeholder="YYYY-MM-DD" class="cal-input"
+              style="width: 150px; padding: 6px !important;"></li>
+          <li><a class="btn-send" (click)="fetchResults(4)"
+              style="border-color: rgb(255, 196, 33); background-image: linear-gradient(-180deg, rgb(247, 36, 36) 0%, rgb(187, 28, 0) 100%); color: rgb(255, 255, 255);">Cricket</a>
+          </li>
+          <li><a class="btn-send" (click)="fetchResults(1)"
+              style="background: #ffc421 !important; color: #000 !important; border-color: #ffc421;">Soccer</a></li>
+          <li><a class="btn-send" (click)="fetchResults(2)"
+              style="background: #ffc421 !important; color: #000 !important; border-color: #ffc421;">Tennis</a></li>
+          <li><a class="btn-send" (click)="fetchResults(9)">Virtual T10</a></li>
+        </ul>
+
+        <div *ngIf="results.length > 0">
+          <h3>Results</h3>
+          <!-- <ul>
+            <li *ngFor="let result of results">{{ result }}</li>
+          </ul> -->
+        </div>
+        <div *ngIf="errorMsg" style="color: red;">{{ errorMsg }}</div>
+
+      </div>
+      <div class="total_all banking-top">
+        <div class="search-wrap" style="float: right;">
+          <div><input id="searchMatches" type="text" placeholder="Search..." [readonly]="isReadonly"
+              (focus)="isReadonly = false">
+
+            <!-- class="search-input ng-untouched ng-pristine ng-valid"></div> -->
+          </div>
+        </div>
+        <table id="matchTable" class="table-s" style="display: table; margin-bottom: 2%;">
+          <thead>
+            <tr>
+              <th width="4%" class="align-L blk">S.No.</th>
+              <th width="4%" class="align-L blk">Sport</th>
+              <th width="5%" class="align-L blk">Match Date</th>
+              <th width="10%" class="align-L blk">Match Name</th>
+              <th width="5%" class="align-L blk">Winner</th>
+            </tr>
+          </thead>
+          <tbody id="oldResult" class="auto-index" *ngIf="results.length > 0">
+
+            <tr *ngFor="let result of results; let i = index">
+              <td class="align-L">{{ i + 1 }}</td>
+              <td class="align-L">{{ getSportName(result.sportid) }}</td>
+              <td class="align-L">{{ result.eventDateTime | date: 'yyyy-MM-dd HH:mm:ss' }}</td>
+              <td class="align-L">{{ result.matchname }}</td>
+              <td class="align-L">{{ result.selectionname }}</td>
+            </tr>
+
+
+          </tbody>
+
+        </table>
+        <div *ngIf="results && !results.length">
+          <p style="color: orange;">No results found or waiting for data.</p>
+        </div>
+
+        <div *ngIf="errorMsg" style="color: red;">
+          {{ errorMsg }}
+        </div>
+        <div>
+          <ul id="pageNumberContent" class="pages"></ul>
+        </div>
+      </div>
+    </div>
+  </div><!---->

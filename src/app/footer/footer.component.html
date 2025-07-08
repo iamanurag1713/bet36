@@ -1,0 +1,34 @@
+<nav
+  style="background-image: linear-gradient(-180deg, rgb(36, 58, 72) 20%, rgb(23, 39, 50) 91%);">
+<ul class="mini-lobby" style="background-image: linear-gradient(-180deg, rgb(36, 58, 72) 20%, rgb(23, 39, 50) 91%);">
+    <li id="home" class="main-nav" ><a neua="Home"
+        class="ui-link">
+        <img src="\assets\images\promot (2).svg"
+          class="icon-promote"></a></li>
+    <li id="sports" [ngClass]="{ 'active-tab': activeTab === 'sports' }" (click)="setActiveTab('sports')" style="background-color: transparent;"><a
+        neua="Sports" class="ui-link" routerLink="/mob-sport">
+        <img
+          src="../../assets/images/transparent.gif" class="icon-sports">
+          Sports
+
+      </a></li>
+    <li id="inPlay" [ngClass]="{ 'active-tab': activeTab === 'inPlay' }" (click)="setActiveTab('inPlay')" style="background-color: transparent;"><a
+        routerlink="/mob-inplay" neua="In-Play" class="ui-link" routerLink="/mob-inplay"><img
+          src="../../assets/images/transparent.gif" class="icon-inplay">In-Play </a></li>
+    <li id="home" class="select"
+      style="background-color: transparent;" [ngClass]="{ 'active-tab': activeTab === 'home' }" (click)="setActiveTab('home')">
+      <a  neua="Home" class="ui-link"  routerLink="/home"><img
+         src="../../assets/images/transparent.gif" class="icon-home">Home </a>
+    </li>
+    <li id="multiMarket"  [ngClass]="{ 'active-tab': activeTab === 'multiMarket' }" (click)="setActiveTab('multiMarket')" style="background-color: transparent;"><a
+       routerLink="/mob-multiMarket" neua="Multi Markets" class="ui-link"
+        routerLink="/mob-multiMarket"><img src="../../assets/images/transparent.gif"
+          class="icon-pin">Multi Markets </a></li>
+  <li id="account" [ngClass]="{ 'active-tab': activeTab === 'account' }" (click)="setActiveTab('account')">
+  <a class="ui-link" [routerLink]="auth.isLoggedIn ? '/mob-myProfile' : '/mob-login'">
+    <img src="../../assets/images/transparent.gif" class="icon-account">Account
+  </a>
+</li>
+<!----><!---->
+  </ul>
+</nav>

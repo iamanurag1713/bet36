@@ -1,0 +1,301 @@
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+@media print {
+  *,
+  :after,
+  :before {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+  @page {
+    size: a3;
+  }
+  body {
+    min-width: 992px !important;
+  }
+}
+* {
+
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  font-family: Tahoma, Helvetica, sans-serif;
+  color: #1e1e1e;
+  font-size: 12px;
+  line-height: 30px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+  user-select: none;
+}
+*,
+:after,
+:before {
+  box-sizing: content-box;
+}
+html,
+body {
+  background-color: #eee;
+}
+
+.on_live-mob dd {
+  color: #fff;
+  font-size: 2.6666666667vw;
+  line-height: 3.7333333333vw;
+  margin-bottom: 1.0666666667vw;
+  vertical-align: top;
+  flex-wrap: wrap;
+}
+.on_live-mob dd,
+.on_live-mob .live_icon-mob span,
+.on_live-mob .live_icon-mob {
+  justify-content: center;
+  align-items: center;
+}
+.on_live-mob dd,
+.on_live-mob .live_icon-mob span,
+.on_live-mob .live_icon-mob {
+  display: flex;
+}
+
+.on_live-mob {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  width: 23%;
+  background-image: linear-gradient(
+    180deg,
+    #000000 0%,
+    rgba(0, 0, 0, 0.7) 82%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding: 1.3333333333vw;
+}
+.on_live-mob dd span {
+  color: #333;
+  background: #fff;
+  text-align: center;
+  border-radius: 0.5333333333vw;
+  min-width: 3.7333333333vw;
+  height: 3.7333333333vw;
+}
+.on_live-mob dd span,
+.on_live-mob .live_icon-mob span:before,
+.on_live-mob .live_icon-mob span,
+.on_live-mob {
+  box-sizing: border-box;
+}
+
+.on_live-mob dd p {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.on_live-mob dd p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+p {
+  margin-bottom: 7px;
+}
+
+.loading-shimmer,
+.mian-wrap .gamehall a:after {
+  background-size: 213.3333333333vw 27.7333333333vw;
+  height: auto;
+}
+.clear,
+.mian-wrap .gamehall a:after {
+  clear: both;
+}
+.mian-wrap .gamehall a:after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mian-wrap .gamehall a:after,
+.wrap-highlight .menu-casino a:after {
+  content: "";
+  display: block;
+}
+
+.mian-wrap .gamehall a:before {
+  content: "";
+  padding-top: 38.356164% ;
+  float: left;
+}
+
+
+.entrance-title {
+    position: absolute;
+    z-index: 4;
+    bottom: -13px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-image: linear-gradient(270deg, rgba(69, 94, 104, 0) 4%, #000000 97%);
+    border-bottom: 5px solid #ffb80c;
+    display: flex
+;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+element.style {
+    right: 0;
+    bottom: 9%;
+    z-index: 9999;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.betbtn1 {
+    transform: rotate(0);
+    transform-origin: left top 0;
+    color: #313131;
+    margin-left: 25px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    text-transform: 1px 1px 0px rgba(0,0,0,.5);
+    float: left;
+    cursor: vertical-text;
+    letter-spacing: 5px;
+    position: fixed;
+    z-index: 10;
+    border-top-left-radius: 5px;
+}
+
+/* Bounce animation */
+@keyframes bounce-4 {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+  }
+  30% {
+    transform: scale(1.06173, 0.938275) translateY(0);
+  }
+  50% {
+    transform: scale(0.912004, 1.088) translateY(-48px); /* Bounce height */
+  }
+  70% {
+    transform: scale(1.02, 0.96) translateY(0);
+  }
+}
+
+/* Apply animation to image */
+.bounce-4 {
+  animation: bounce-4 2s ease infinite;
+  transform-origin: bottom;
+}
+
+.on_live-mob .live_icon-mob {
+    height: 4.2666666667vw;
+    line-height: 4.2666666667vw;
+    font-weight: 700;
+    color: #fff;
+    padding-right: 1.3333333333vw;
+    background-image: linear-gradient(180deg, #fb3434 0%, #e80505 100%);
+    border-radius: .8vw;
+    display: inline-flex
+;
+}
+
+
+.on_live-mob dd {
+    color: #fff;
+    font-size: 2.6666666667vw;
+    line-height: 3.7333333333vw;
+    margin-bottom: 1.0666666667vw;
+    vertical-align: top;
+    flex-wrap: wrap;
+}
+
+.on_live-mob dd span {
+    color: #333;
+    background: #fff;
+    text-align: center;
+    border-radius: .5333333333vw;
+    min-width: 3.7333333333vw;
+    height: 3.7333333333vw;
+}
+
+.mian-wrap .gamehall a:before {
+    content: "";
+    padding-top: 38.3561643836%;
+    float: left;
+}
+.extend-btn {
+    width: 100%;
+    background-color: #fff9;
+    padding: 8px 0;
+    border-radius: 8px;
+    font-size: 3.4666666667vw;
+}
+
+.policy-mob-link li a{
+
+    text-decoration: underline;
+}
+.policy-mob-link li:before {
+    margin: 0 .4vw;
+    color: #000000b3;
+    content: "|";
+}

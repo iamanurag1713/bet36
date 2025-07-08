@@ -1,0 +1,803 @@
+<div class="mian-wrap">
+  <div class="game-wrap">
+    <div id="matchTrackerWrap" class="match-tracker-wrap">
+
+
+      <h4 id="gameInfo" class="game-info"><span style="width: 73vw;">Cricket</span><!----><!---->
+        <ul id="infoIcon" class="info-icon">
+          <li id="inPlayIcon"><img
+              src="data:image/gif;base64,R0lGODdhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+              class="info-inplay">In-Play</li>
+          <!-- <li  id="fancyBetIcon" ><span
+            class="game-fancy">Fancy</span></li> -->
+          <!-- <li  id="bookMakerIcon" style="display: none;"><span
+            class="game-bookmaker">BookMaker</span></li>
+        <li  id="feedingSiteIcon" style="display: none;"><span
+            class="game-sportsbook">Sportsbook</span></li>
+        <li ><span  id="lowLiquidityTag" class="game-low_liq"
+            style="display: none;">Low</span></li> -->
+        </ul>
+      </h4>
+
+      <div class="col block"><iframe title="Score" allowfullscreen="true" class="scorelive"
+          src="https://score1.365cric.com/#/score1/34490055?v=8006"></iframe>
+      </div>
+      <ul class="match-btn" *ngIf="isLoggedIn">
+        <li><a id="liveMultiMarketPin" name="gameHeadPin" class="btn-pin" style="cursor: pointer;">Pin</a></li>
+        <li><a class="btn-refresh" style="cursor: pointer;">Refresh</a></li>
+      </ul>
+
+
+    </div>
+  </div>
+  <!-- <div  id="naviMarket" class="market-type ps ps--theme_default ps--active-x"
+      style="display: block;">
+      <ul  id="naviMarketList"></ul>
+
+    </div> -->
+
+  <div id="marketBetsWrap" class="bets-wrap asiahadicap"><a id="minMaxButton" class="bet-limit"></a><!---->
+    <dl id="betsHead" class="bets-selections-head">
+      <dt style="display: flex; align-items: center;">
+        <p><!----><span style="display: flex; font-weight: 600;"><span style="font-weight: 600; color: #31446D;"> Min /
+              Max : &nbsp;</span> 0.1 /
+            100</span><!----><!----><!----><!----></p>
+      </dt>
+      <dd class="mode-land"></dd>
+      <dd class="mode-land"></dd>
+      <dd>Back</dd>
+      <dd>Lay</dd>
+      <dd class="mode-land"></dd>
+      <dd class="mode-land"></dd>
+    </dl>
+    <div id="Odds0Oddsundefined{{team1}}">
+      <dl class="bets-selections" style="display: flex;">
+        <dt>
+          <h4 id="runnerName">{{team1}}</h4><!----><!----><!---->
+        </dt>
+        <dd id="suspend" class="suspend" style="display: none;">
+          <p>Suspend</p>
+        </dd>
+        <dd id="closed" class="suspend" style="display: none;">
+          <p>Closed</p>
+        </dd>
+        <dd id="nonRunner" class="suspend" style="display: none;">
+          <p>Non Runner</p>
+        </dd><!---->
+        <div *ngFor="let match of matches">
+          <dd id="back_1" class="">
+            <a class="back-1 spark">
+              {{ match.fancy?.backPrice || '1.42' }}
+              <span>{{ match.fancy?.backStake || '10537.5' }}</span>
+            </a>
+          </dd>
+
+          <dd id="lay_1" class="">
+            <a class="lay-1 spark">
+              {{ match.fancy?.layPrice || '1.43' }}
+              <span>{{ match.fancy?.layStake || '0' }}</span>
+            </a>
+          </dd>
+        </div>
+      </dl><!----><!---->
+    </div>
+    <div id="Odds1Oddsundefined{{team2 }}">
+      <dl class="bets-selections" style="display: flex;">
+        <dt>
+          <h4 id="runnerName">{{team2}}</h4><!----><!----><!---->
+        </dt>
+        <dd id="suspend" class="suspend" style="display: none;">
+          <p>Suspend</p>
+        </dd>
+        <dd id="closed" class="suspend" style="display: none;">
+          <p>Closed</p>
+        </dd>
+        <dd id="nonRunner" class="suspend" style="display: none;">
+          <p>Non Runner</p>
+        </dd><!---->
+        <dd id="back_1" class=""><a class="back-1 spark">3.35<span> 21.34</span></a></dd>
+        <dd id="lay_1" class=""><a class="lay-1 spark">3.4<span> 4584.2</span></a></dd><!----><!---->
+      </dl><!----><!---->
+    </div><!---->
+  </div>
+  <div id="bookMakerWrap">
+    <div class="bets-wrap bets-bookmaker" style="display: block;">
+      <h4><a id="multiMarketPin" class="pin-off">Pin to Muilti
+          Markets</a><span>Bookmaker Market</span>
+        <p>| Zero Commission</p><a id="openBookMakerInfo" class="btn-fancy_info"></a><!---->
+      </h4>
+      <dl class="bets-selections-head">
+        <dt></dt>
+        <dd class="mode-land"></dd>
+        <dd class="mode-land"></dd>
+        <dd>Back</dd>
+        <dd>Lay</dd>
+        <dd class="mode-land"></dd>
+        <dd class="mode-land"></dd>
+      </dl>
+      <div id="Book0Odds{{ team1 }}">
+        <dl class="bets-selections" style="display: flex;">
+          <dt>
+            <h4 id="runnerName">{{ team1 }}</h4>
+            <ul>
+              <li id="after" class="to-lose"> </li>
+            </ul><!----><!----><!---->
+          </dt>
+          <dd class="backlay_box">
+            <dl class="back-gradient">
+              <dd id="back_1"><a>0</a></dd>
+            </dl>
+            <dl class="lay-gradient">
+              <dd id="lay_1"><a>0</a></dd>
+            </dl>
+          </dd>
+          <dd id="suspend" class="suspend-fancy">
+            <p id="info">Ball Running</p>
+          </dd><!---->
+        </dl><!----><!---->
+      </div>
+      <div id="Book1Oddsundefined{{team2}}">
+        <dl class="bets-selections" style="display: flex;">
+          <dt>
+            <h4 id="runnerName">{{team2}}</h4>
+            <ul>
+              <li id="after" class="to-lose"> </li>
+            </ul><!----><!----><!---->
+          </dt>
+          <dd class="backlay_box">
+            <dl class="back-gradient">
+              <dd id="back_1"><a>0</a></dd>
+            </dl>
+            <dl class="lay-gradient">
+              <dd id="lay_1"><a>0</a></dd>
+            </dl>
+          </dd>
+          <dd id="suspend" class="suspend-fancy">
+            <p id="info">Ball Running</p>
+          </dd><!---->
+        </dl><!----><!---->
+      </div><!---->
+    </div>
+  </div><!----><!----><!---->
+  <div id="tossfancy">
+    <div class="bets-wrap bets-bookmaker" style="display: block;">
+      <h4><span class="a-depth"></span><span>Who will win the Toss</span><a id="openBookMakerInfo"
+          class="btn-fancy_info"></a><!----></h4>
+      <dl class="bets-selections-head">
+        <dt></dt>
+        <dd class="mode-land"></dd>
+        <dd class="mode-land"></dd>
+        <dd>Back</dd>
+        <dd>Lay</dd>
+        <dd class="mode-land"></dd>
+        <dd class="mode-land"></dd>
+      </dl>
+      <div id="Toss0Oddsundefined{{team1}}">
+        <dl class="bets-selections" style="display: flex;">
+          <dt>
+            <h4 id="runnerName">{{team1 }}</h4><!---->
+          </dt>
+          <dd class="backlay_box">
+            <dl class="back-gradient">
+              <dd id="back_1" class="select"><a style="padding: 2px;">00<span>00</span></a></dd>
+            </dl>
+            <dl class="lay-gradient disabled">
+              <dd id="lay_1"><a style="padding: 2px;"> 00<span>00</span></a></dd>
+            </dl>
+          </dd>
+        </dl>
+
+
+        <div id="Toss1Oddsundefined{{team2}}">
+          <dl class="bets-selections" style="display: flex;">
+            <dt>
+              <h4 id="runnerName">{{team2}}</h4><!---->
+            </dt>
+            <dd class="backlay_box">
+              <dl class="back-gradient">
+                <dd id="back_1" class=""><a style="padding: 2px;">0.95<span> 10000</span></a></dd>
+              </dl>
+              <dl class="lay-gradient disabled">
+                <dd id="lay_1"><a style="padding: 2px;">0.95<span> 10000</span></a></dd>
+              </dl>
+            </dd>
+          </dl><!----><!----><!---->
+        </div><!---->
+      </div>
+    </div><!---->
+    <div name="multiMarketItem" id="fancyBet" style="margin-bottom: 60px;">
+      <div id="fancyBetHead" class="fancy_bet-head">
+        <h4 class="in-play"><a id="multiMarketPin" class="pin-off">Pin to Multi Markets</a><span>
+            <pre>in-play</pre>Fancy Bet
+          </span><a class="btn-head_rules">Rules</a></h4><a id="showSportsBookBtn" class="other-tab"><span
+            class="tag-new">New</span> Premium
+          Cricket </a><!---->
+      </div>
+      <div id="fancyBetTabWrap" class="fancy_bet_tab-wrap ps ps--theme_default ps--active-x">
+        <ul class="special_bets-tab">
+          <li class="select"><a>All</a></li>
+          <li><a>Normal</a></li>
+          <li><a>Fancy1</a></li>
+          <li><a>Over</a></li>
+          <li><a>Ball by Ball</a></li>
+          <li><a>Khadda</a></li>
+          <li><a>Lottery</a></li>
+          <li><a>Odd/Even</a></li>
+        </ul>
+      </div>
+      <div>
+        <div id="fancyBetField" class="bets-wrap fancy-bet">
+          <dl class="bets-selections-head fancybg">
+            <dt>Normal Fancy</dt>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+            <dd>No</dd>
+            <dd>Yes</dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl>
+        </div>
+        <div id="fancyBetTag">
+          <div class="bets-wrap fancy-bet" id="Fancy0Oddsundefined">
+            <h5><span id="marketName">Match 1st Over
+                ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+                info</a><!----></h5>
+            <dl class="bets-selections">
+              <dt class="line_market-selection"><!----></dt><!----><!---->
+              <dd id="lay_1"><a class="lay-1">4<span>100</span></a></dd>
+              <dd id="back_1"><a class="back-1">5<span>100</span></a></dd>
+              <dd class="mode-land"></dd>
+              <dd class="mode-land"></dd>
+            </dl><!----><!---->
+          </div>
+          <div class="bets-wrap fancy-bet" id="Fancy1Oddsundefined">
+            <h5><span id="marketName">10 Over NED ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+                info</a><!----></h5>
+            <dl class="bets-selections">
+              <dt class="line_market-selection"><!----></dt><!----><!---->
+              <dd id="lay_1"><a class="lay-1 select">48<span>100</span></a></dd>
+              <dd id="back_1"><a class="back-1">50<span>100</span></a></dd>
+              <dd class="mode-land"></dd>
+              <dd class="mode-land"></dd>
+            </dl><!---->
+
+
+            <ul class="btn-list">
+              <li><a id="cancel" class="btn">Cancel </a>
+              </li>
+              <li><a id="placeBet" class="btn-send disable">Place Bet</a></li>
+            </ul>
+            <div id="acceptAnyOddsBox" class="bet-setting" style="display: none;"><a id="acceptAnyOdds" href="#"
+                class="bet-check checked">Accept Any Odds
+              </a><span id="sportsBookMaxStake"><a id="getSportsBookMaxStakeBtn" href="#" class="max-bet">Max</a></span>
+            </div>
+          </div><!---->
+
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy2Oddsundefined">
+          <h5><span id="marketName">10 Over NEP ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">45<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">47<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy3Oddsundefined">
+          <h5><span id="marketName">50 Over NED ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">282<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">286<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy4Oddsundefined">
+          <h5><span id="marketName">50 Over NEP ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">255<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">259<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy5Oddsundefined">
+          <h5><span id="marketName">1st WKT NED ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">28<span>110</span></a></dd>
+            <dd id="back_1"><a class="back-1">28<span>90</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy6Oddsundefined">
+          <h5><span id="marketName">1st WKT NEP ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">22<span>110</span></a></dd>
+            <dd id="back_1"><a class="back-1">22<span>90</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy7Oddsundefined">
+          <h5><span id="marketName">1st WKT Run Bhav NED
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">1<span>6</span></a></dd>
+            <dd id="back_1"><a class="back-1">1<span>3</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy8Oddsundefined">
+          <h5><span id="marketName">1st WKT Run Bhav NEP
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">1<span>7</span></a></dd>
+            <dd id="back_1"><a class="back-1">1<span>4</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy9Oddsundefined">
+          <h5><span id="marketName">M O'Dowd Runs Open
+              Valid.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">29<span>110</span></a></dd>
+            <dd id="back_1"><a class="back-1">29<span>90</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy10Oddsundefined">
+          <h5><span id="marketName">M Levitt Runs Open
+              Valid.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">25<span>110</span></a></dd>
+            <dd id="back_1"><a class="back-1">25<span>90</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy11Oddsundefined">
+          <h5><span id="marketName">Aasif Sheikh Runs Open
+              Valid.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">20<span>110</span></a></dd>
+            <dd id="back_1"><a class="back-1">20<span>90</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy12Oddsundefined">
+          <h5><span id="marketName">K Bhurtel Runs Open
+              Valid.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">20<span>110</span></a></dd>
+            <dd id="back_1"><a class="back-1">20<span>90</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy13Oddsundefined">
+          <h5><span id="marketName">M O'Dowd Run Bhav Open
+              Valid.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">1<span>6</span></a></dd>
+            <dd id="back_1"><a class="back-1">1<span>3</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy14Oddsundefined">
+          <h5><span id="marketName">M Levitt Run Bhav Open
+              Valid.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">1<span>6</span></a></dd>
+            <dd id="back_1"><a class="back-1">1<span>3</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy15Oddsundefined">
+          <h5><span id="marketName">Aasif Sheikh Run Bhav Open
+              Valid.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">1<span>7</span></a></dd>
+            <dd id="back_1"><a class="back-1">1<span>4</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy16Oddsundefined">
+          <h5><span id="marketName">K Bhurtel Run Bhav Open
+              Valid.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">1<span>7</span></a></dd>
+            <dd id="back_1"><a class="back-1">1<span>4</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy17Oddsundefined">
+          <h5><span id="marketName">M O'Dowd Boundaries Open
+              Valid.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">4<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">5<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy18Oddsundefined">
+          <h5><span id="marketName">M Levitt Boundaries Open
+              Valid.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">3<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">4<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy19Oddsundefined">
+          <h5><span id="marketName">Aasif Sheikh Boundaries
+              Open Valid.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">3<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">4<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy20Oddsundefined">
+          <h5><span id="marketName">K Bhurtel Boundaries Open
+              Valid.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">3<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">4<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy21Oddsundefined">
+          <h5><span id="marketName">1st WKT Pship Boundaries
+              NED ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">4<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">5<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy22Oddsundefined">
+          <h5><span id="marketName">1st WKT Pship Boundaries
+              NEP ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">3<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">4<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy23Oddsundefined">
+          <h5><span id="marketName">H.M.B Face By M O'Dowd
+              Open Valid.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">36<span>110</span></a></dd>
+            <dd id="back_1"><a class="back-1">36<span>90</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy24Oddsundefined">
+          <h5><span id="marketName">H.M.B Face By M Levitt
+              Open Valid.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">32<span>110</span></a></dd>
+            <dd id="back_1"><a class="back-1">32<span>90</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy25Oddsundefined">
+          <h5><span id="marketName">H.M.B Face By Aasif Sheikh
+              Open Valid.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">29<span>110</span></a></dd>
+            <dd id="back_1"><a class="back-1">29<span>90</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy26Oddsundefined">
+          <h5><span id="marketName">H.M.B Face By K Bhurtel
+              Open Valid.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">29<span>110</span></a></dd>
+            <dd id="back_1"><a class="back-1">29<span>90</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy27Oddsundefined">
+          <h5><span id="marketName">1st WKT Lost To NED Balls
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">35<span>110</span></a></dd>
+            <dd id="back_1"><a class="back-1">35<span>90</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy28Oddsundefined">
+          <h5><span id="marketName">1st WKT Lost To NEP Balls
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">31<span>110</span></a></dd>
+            <dd id="back_1"><a class="back-1">31<span>90</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy29Oddsundefined">
+          <h5><span id="marketName">Total Match Four
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">43<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">46<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy30Oddsundefined">
+          <h5><span id="marketName">Total Match Six
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">11<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">13<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy31Oddsundefined">
+          <h5><span id="marketName">Total Match Boundaries
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">54<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">57<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy32Oddsundefined">
+          <h5><span id="marketName">Total Match WKT
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">16<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">17<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy33Oddsundefined">
+          <h5><span id="marketName">3 WKT OR MORE BY BOWLER IN
+              MATCH ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">4<span>125</span></a></dd>
+            <dd id="back_1"><a class="back-1">4<span>75</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy34Oddsundefined">
+          <h5><span id="marketName">Total Match Wide
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">17<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">19<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy35Oddsundefined">
+          <h5><span id="marketName">Total Match Extra
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">30<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">32<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy36Oddsundefined">
+          <h5><span id="marketName">Highest Run In Over
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">17<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">18<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy37Oddsundefined">
+          <h5><span id="marketName">Top Scoring Batsman Runs
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">83<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">85<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy38Oddsundefined">
+          <h5><span id="marketName">Total Match 30s
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">3<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">4<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy39Oddsundefined">
+          <h5><span id="marketName">Total Match Fifty
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">3<span>125</span></a></dd>
+            <dd id="back_1"><a class="back-1">3<span>75</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy40Oddsundefined">
+          <h5><span id="marketName">Total Match Duckouts
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">1<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">2<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy41Oddsundefined">
+          <h5><span id="marketName">Most Balls Faced By
+              Batsman ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">97<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">99<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy42Oddsundefined">
+          <h5><span id="marketName">Most Runs Given By a
+              Bowler ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">65<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">69<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy43Oddsundefined">
+          <h5><span id="marketName">Total Match Four Hitters
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">12<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">14<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy44Oddsundefined">
+          <h5><span id="marketName">Total Match Six Hitters
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">6<span>125</span></a></dd>
+            <dd id="back_1"><a class="back-1">6<span>75</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div>
+        <div class="bets-wrap fancy-bet" id="Fancy45Oddsundefined">
+          <h5><span id="marketName">Total Match Wicket Takers
+              ADV.</span><a id="open-fancy_info" class="btn-fancy_info">fancybet
+              info</a><!----></h5>
+          <dl class="bets-selections">
+            <dt class="line_market-selection"><!----></dt><!----><!---->
+            <dd id="lay_1"><a class="lay-1">8<span>100</span></a></dd>
+            <dd id="back_1"><a class="back-1">9<span>100</span></a></dd>
+            <dd class="mode-land"></dd>
+            <dd class="mode-land"></dd>
+          </dl><!----><!---->
+        </div><!---->
+      </div>
+    </div><!----><!----><!----><!----><!----><!----><!---->
+  </div><!----><!----><!----><!----><!----><!----><!---->
+</div>

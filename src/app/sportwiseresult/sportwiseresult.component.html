@@ -1,0 +1,421 @@
+
+    <div  class="mian-wrap1">
+    <div  id="highlightLabel" class="highlight-fix">
+      <div  class="wrap-highlight_list">
+        <h3
+          style="background-image: linear-gradient(-180deg, rgb(46, 75, 94) 0%, rgb(36, 58, 72) 82%); color: rgb(255, 255, 255);">
+          Check Results</h3>
+      </div>
+      <div  class="function-wrap">
+        <ul  class="input-list">
+          <li ><input  id="betsstartDate" type="datetime-local"
+              class="cal-input" style="width: 150px; padding: 6px !important;"> to <input
+              id="betsendDate" type="datetime-local" class="cal-input" style="width: 150px; padding: 6px !important;">
+          </li>
+          <li  style="display: none;">(TimeZone:IST)</li>
+        </ul>
+        <ul  class="input-list">
+          <li ><a  class="btn-send"
+              style="background-image: linear-gradient(-180deg, rgb(247, 36, 36) 0%, rgb(187, 28, 0) 100%); color: rgb(255, 255, 255);">Cricket</a>
+          </li>
+          <li ><a  class="btn-send"
+              style="background-image: linear-gradient(-180deg, rgb(247, 36, 36) 0%, rgb(187, 28, 0) 100%); color: rgb(255, 255, 255);">Soccer</a>
+          </li>
+          <li ><a  class="btn-send"
+              style="background-image: linear-gradient(-180deg, rgb(247, 36, 36) 0%, rgb(187, 28, 0) 100%); color: rgb(255, 255, 255);">Tennis</a>
+          </li>
+          <li ><a  href="/Mcheckvt10result"
+              class="btn-send">Virtual T10</a></li>
+        </ul>
+        <div  class="search-wrap" style="float: right;">
+          <div ><input  id="searchMatches" type="text"
+              placeholder="Search..." style="padding: 5px; margin: 15px 0;" class="ng-untouched ng-pristine ng-valid">
+          </div>
+        </div>
+      </div>
+      <div  class="table-responsive" style="width: 100%; margin-bottom: 20%;">
+        <table  id="matchTable" class="table-s table table-bordered"
+          style="display: table; margin-bottom: 2%;">
+          <thead >
+            <tr >
+              <th  width="4%" class="align-L blk">S.No.</th>
+              <th  width="4%" class="align-L blk">Sport</th>
+              <th  width="5%" class="align-L blk">Match Date</th>
+              <th  width="10%" class="align-L blk">Match Name</th>
+              <th  width="5%" class="align-L blk">Winner</th>
+            </tr>
+          </thead>
+          <tbody  id="oldResult" class="auto-index">
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">1</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-19 16:23:30</td>
+              <td  class="align-L">Prague Tigers v Prague Barbarians</td>
+              <td  class="align-L">Prague Tigers</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">2</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-19 15:30:05</td>
+              <td  class="align-L">Gujarat Titans SRL T20 v Royal Challengers Bangalore SRL
+                T20</td>
+              <td  class="align-L">Gujarat Titans SRL T20</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">3</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-19 13:26:03</td>
+              <td  class="align-L">Australia SRL T20 v New Zealand SRL T20</td>
+              <td  class="align-L">Australia SRL T20</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">4</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-19 12:03:24</td>
+              <td  class="align-L">Lahore Qalanders SRL T20 v Peshawar Zalmi SRL T20</td>
+              <td  class="align-L">Peshawar Zalmi SRL T20</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">5</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-19 09:59:20</td>
+              <td  class="align-L">MI New York v Seattle Orcas</td>
+              <td  class="align-L">MI New York</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">6</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-19 02:16:59</td>
+              <td  class="align-L">Samp Army Cocrico Cavali v Scarlet Ibis Scorchers</td>
+              <td  class="align-L">Samp Army Cocrico Cavali</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">7</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-19 02:10:42</td>
+              <td  class="align-L">Surrey v Sussex</td>
+              <td  class="align-L">Surrey</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">8</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-19 02:05:19</td>
+              <td  class="align-L">Kent v Gloucestershire</td>
+              <td  class="align-L">Gloucestershire</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">9</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-19 01:30:14</td>
+              <td  class="align-L">West Indies SRL T20 v Afghanistan SRL T20</td>
+              <td  class="align-L">West Indies SRL T20</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">10</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-19 00:52:58</td>
+              <td  class="align-L">Worcestershire v Durham</td>
+              <td  class="align-L">Worcestershire</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">11</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-19 00:01:17</td>
+              <td  class="align-L">Jabalpur Lions v Chambal Ghariyals</td>
+              <td  class="align-L">Jabalpur Lions</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">12</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 23:51:07</td>
+              <td  class="align-L">Madurai Panthers v Nellai Royal Kings</td>
+              <td  class="align-L">Madurai Panthers</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">13</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 23:32:58</td>
+              <td  class="align-L">Leatherback Strikers v Soca Kings</td>
+              <td  class="align-L">Soca Kings</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">14</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 23:29:57</td>
+              <td  class="align-L">Quetta Gladiators SRL T20 v Islamabad United SRL T20</td>
+              <td  class="align-L">Islamabad United SRL T20</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">15</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 23:24:26</td>
+              <td  class="align-L">Munster Reds v Northern Knights</td>
+              <td  class="align-L">Munster Reds</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">16</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 23:01:57</td>
+              <td  class="align-L">Scotland v Netherlands</td>
+              <td  class="align-L">Netherlands</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">17</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 21:47:34</td>
+              <td  class="align-L">Surrey W v Lancashire Thunder W</td>
+              <td  class="align-L">Surrey W</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">18</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 21:14:09</td>
+              <td  class="align-L">Delhi Capitals SRL T20 v Sunrisers Hyderabad SRL T20</td>
+              <td  class="align-L">Sunrisers Hyderabad SRL T20</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">19</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 19:41:10</td>
+              <td  class="align-L">Bundelkhand Bulls v Indore Pink Panthers</td>
+              <td  class="align-L">Bundelkhand Bulls</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">20</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 19:16:21</td>
+              <td  class="align-L">Hobart Hurricanes SRL T20 v Brisbane Heat SRL T20</td>
+              <td  class="align-L">Brisbane Heat SRL T20</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">21</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 19:04:27</td>
+              <td  class="align-L">Warwickshire W v Essex W</td>
+              <td  class="align-L">Warwickshire W</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">22</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 18:34:15</td>
+              <td  class="align-L">Gohilwad Gladiators v Anmol Kings Halar</td>
+              <td  class="align-L">Anmol Kings Halar</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">23</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 18:11:33</td>
+              <td  class="align-L">Leinster Lightning v North-West Warriors</td>
+              <td  class="align-L">Leinster Lightning</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">24</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 17:38:45</td>
+              <td  class="align-L">Eagle Nashik Titans v Raigad Royals</td>
+              <td  class="align-L">No Result</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">25</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 17:26:41</td>
+              <td  class="align-L">Pretoria Capitals SRL T20 v Joburg Super Kings SRL T20
+              </td>
+              <td  class="align-L">Joburg Super Kings SRL T20</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">26</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 15:23:13</td>
+              <td  class="align-L">Chennai Super Kings SRL T20 v Mumbai Indians SRL T20</td>
+              <td  class="align-L">Mumbai Indians SRL T20</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">27</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 13:27:29</td>
+              <td  class="align-L">England SRL T20 v Pakistan SRL T20</td>
+              <td  class="align-L">England SRL T20</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">28</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 11:19:33</td>
+              <td  class="align-L">Peshawar Zalmi SRL T20 v Karachi Kings SRL T20</td>
+              <td  class="align-L">Karachi Kings SRL T20</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">29</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 09:49:47</td>
+              <td  class="align-L">Washington Freedom v Los Angeles Knight Riders</td>
+              <td  class="align-L">Washington Freedom</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">30</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 03:28:11</td>
+              <td  class="align-L">South Africa SRL T20 v India SRL T20</td>
+              <td  class="align-L">South Africa SRL T20</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">31</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 03:08:55</td>
+              <td  class="align-L">West Indies W v South Africa W</td>
+              <td  class="align-L">South Africa W</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">32</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 02:32:50</td>
+              <td  class="align-L">Hampshire v Surrey</td>
+              <td  class="align-L">Surrey</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">33</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-18 02:01:35</td>
+              <td  class="align-L">Leatherback Strikers v Scarlet Ibis Scorchers</td>
+              <td  class="align-L">Scarlet Ibis Scorchers</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">34</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 23:35:59</td>
+              <td  class="align-L">Ruby Trichy Warriors v Lyca Kovai Kings</td>
+              <td  class="align-L">Ruby Trichy Warriors</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">35</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 23:33:23</td>
+              <td  class="align-L">Satara Warriors v Raigad Royals</td>
+              <td  class="align-L">Raigad Royals</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">36</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 23:31:17</td>
+              <td  class="align-L">Zalawad Strikers v Sorath Lions</td>
+              <td  class="align-L">Zalawad Strikers</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">37</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 23:28:04</td>
+              <td  class="align-L">Chicago Steelpan Players v Blue Devils</td>
+              <td  class="align-L">Blue Devils</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">38</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 23:24:55</td>
+              <td  class="align-L">Lahore Qalandars SRL T20 v Quetta Gladiators SRL T20</td>
+              <td  class="align-L">Quetta Gladiators SRL T20</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">39</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 23:07:38</td>
+              <td  class="align-L">Northern Knights v Leinster Lightning</td>
+              <td  class="align-L">Northern Knights</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">40</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 23:05:08</td>
+              <td  class="align-L">Rewa Jaguars v Bhopal Leopards</td>
+              <td  class="align-L">No Result</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">41</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 22:45:47</td>
+              <td  class="align-L">Scotland v Nepal</td>
+              <td  class="align-L">Nepal</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">42</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 22:33:47</td>
+              <td  class="align-L">Adamas Howrah Warriors v Murshidabad Kings</td>
+              <td  class="align-L">No Result</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">43</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 22:25:28</td>
+              <td  class="align-L">Hampshire W v Surrey W</td>
+              <td  class="align-L">Surrey W</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">44</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 22:02:28</td>
+              <td  class="align-L">Prague Spartans v Ostrava CC</td>
+              <td  class="align-L">Prague Spartans</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">45</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 21:34:13</td>
+              <td  class="align-L">Rajasthan Royals SRL T20 v Lucknow Super Giants SRL T20
+              </td>
+              <td  class="align-L">Lucknow Super Giants SRL T20</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">46</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 19:55:37</td>
+              <td  class="align-L">Moravian CC v Prague Spartans</td>
+              <td  class="align-L">Prague Spartans</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">47</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 19:29:23</td>
+              <td  class="align-L">Perth Scorchers SRL T20 v Sydney Thunder SRL T20</td>
+              <td  class="align-L">Perth Scorchers SRL T20</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">48</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 19:05:09</td>
+              <td  class="align-L">Gwalior Cheetahs v Bundelkhand Bulls</td>
+              <td  class="align-L">Gwalior Cheetahs</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">49</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 18:35:26</td>
+              <td  class="align-L">Durban Super Giants SRL T20 v Paarl Royals SRL T20</td>
+              <td  class="align-L">Durban Super Giants SRL T20</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">50</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 18:28:34</td>
+              <td  class="align-L">Munster Reds v North-West Warriors</td>
+              <td  class="align-L">North-West Warriors</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">51</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 18:27:53</td>
+              <td  class="align-L">Ratnagiri Jets v Puneri Bappa</td>
+              <td  class="align-L">Puneri Bappa</td>
+            </tr>
+            <tr  style="font-size: 3.46667vw;">
+              <td  class="align-L">52</td>
+              <td  class="align-L">Cricket</td>
+              <td  class="align-L">2025-06-17 18:26:35</td>
+              <td  class="align-L">Ostrava CC v Praha Dominators</td>
+              <td  class="align-L">Praha Dominators</td>
+            </tr><!---->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+

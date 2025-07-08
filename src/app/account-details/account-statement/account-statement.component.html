@@ -1,0 +1,221 @@
+
+  <div  class="parent">
+    <div  class="main_wrap">
+
+        <div  class="col-left">
+          <div  class="sub_path">
+            <div  class="path"><a routerLink="#path-pop"
+                class="path-back">...</a>
+              <ul >
+                <li  class="path-last"><a routerLink="#">My Account
+                  </a></li>
+              </ul>
+            </div>
+            <ul  id="path-pop" class="path-pop"></ul>
+            <ul  class="menu-list">
+              <li ><a  id="sub_menu_detail"
+                  routerlinkactive="select"routerLink="/myAccount/my-profile">My Profile </a></li>
+              <li ><a  id="sub_menu_summary"
+                  routerlinkactive="select"routerLink="/myAccount/balance-overview">Balance Overview </a></li>
+              <li ><a  id="sub_menu_accountCashStatement_log"
+                  routerlinkactive="select"routerLink="/myAccount/account-statement" class="select">Account Statement </a>
+              </li>
+              <li ><a  id="sub_menu_my_bets"
+                  routerlinkactive="select"routerLink="/myAccount/mybet">My Bets </a></li>
+              <li ><a  id="sub_menu_my_bets"
+                  routerlinkactive="select"routerLink="/myAccount/bet-history/Odds">Bets History </a></li>
+              <li ><a  id="sub_menu_my_bets"
+                  routerlinkactive="select"routerLink="/myAccount/profit-loss/Odds">Profit &amp; Loss </a></li>
+              <li ><a  id="sub_menu_activity_log"
+                  routerlinkactive="select"routerLink="/myAccount/checkresults">Results </a></li>
+              <li ><a  id="sub_menu_activity_log"
+                  routerlinkactive="select"routerLink="/myAccount/activity-log">Activity Log </a></li>
+            </ul>
+          </div>
+        </div>
+
+      <div  class="col-center report">
+        <h2 >Account Statement</h2>
+        <table  id="table_log" class="table01">
+          <tbody >
+            <tr >
+              <th  width="13%" class="align-L">Date/Time</th>
+              <th  width="10%">Deposit</th>
+              <th  width="10%">Withdraw</th>
+              <th  width="10%">Balance</th>
+              <th  width="50%">Remark</th>
+              <th  width="">From/To</th>
+            </tr>
+          </tbody>
+          <tbody  id="content">
+            <tr  id="tempTr">
+              <td  id="createDate" class="align-L">2025-05-26 23:43:50</td>
+              <td  id="deposit" class="green">1.54</td>
+              <td  id="withdraw" class="red">-</td>
+              <td  id="balance">43.57</td><!---->
+              <td  id="remark">Cricket / Punjab Kings v Mumbai Indians / Match / Punjab
+                Kings v Mumbai Indians / 34354588 / Punjab Kings</td><!---->
+              <td ><span  id="from">-</span><img
+                   src="../../../assets/images/icon-fromto.png" class="fromto"><span
+                   id="to">-</span></td>
+            </tr>
+            <tr  id="tempTr">
+              <td  id="createDate" class="align-L">2025-03-21 15:06:19</td>
+              <td  id="deposit" class="green">-</td>
+              <td  id="withdraw" class="red">-3.00</td>
+              <td  id="balance">42.03</td><!---->
+              <td  id="remark">Cricket / New Zealand v Pakistan / Match / New Zealand v
+                Pakistan / 34135335 / Pakistan</td><!---->
+              <td ><span  id="from">-</span><img
+                   src="../../../assets/images/icon-fromto.png" class="fromto"><span
+                   id="to">-</span></td>
+            </tr>
+            <tr  id="tempTr">
+              <td  id="createDate" class="align-L">2025-03-21 14:49:25</td>
+              <td  id="deposit" class="green">0.01</td>
+              <td  id="withdraw" class="red">-</td>
+              <td  id="balance">45.03</td><!---->
+              <td  id="remark">Cricket / New Zealand v Pakistan / Fancy / Tied Match /
+                1.241055413 / No</td><!---->
+              <td ><span  id="from">-</span><img
+                   src="../../../assets/images/icon-fromto.png" class="fromto"><span
+                   id="to">-</span></td>
+            </tr>
+            <tr  id="tempTr">
+              <td  id="createDate" class="align-L">2025-03-21 11:53:59</td>
+              <td  id="deposit" class="green">1.00</td>
+              <td  id="withdraw" class="red">-</td>
+              <td  id="balance">45.02</td><!---->
+              <td  id="remark">Cricket / New Zealand v Pakistan / Fancy / 1st Over NZ ADV. /
+                34135335-43519156.FY / 4</td><!---->
+              <td ><span  id="from">-</span><img
+                   src="../../../assets/images/icon-fromto.png" class="fromto"><span
+                   id="to">-</span></td>
+            </tr>
+            <tr  id="tempTr">
+              <td  id="createDate" class="align-L">2025-03-21 11:30:49</td>
+              <td  id="deposit" class="green">-</td>
+              <td  id="withdraw" class="red">-1.00</td>
+              <td  id="balance">44.02</td><!---->
+              <td  id="remark">Cricket / New Zealand v Pakistan / Fancy / Who will win the
+                Toss / 34135335-870648.FY / Pakistan</td><!---->
+              <td ><span  id="from">-</span><img
+                   src="../../../assets/images/icon-fromto.png" class="fromto"><span
+                   id="to">-</span></td>
+            </tr>
+            <tr  id="tempTr">
+              <td  id="createDate" class="align-L">2025-03-20 13:47:15</td>
+              <td  id="deposit" class="green">0.39</td>
+              <td  id="withdraw" class="red">-</td>
+              <td  id="balance">45.02</td><!---->
+              <td  id="remark">Cricket / Thane Tigers v Koparkairne Titans / Match / Thane
+                Tigers v Koparkairne Titans / 34135281 / Thane Tigers</td><!---->
+              <td ><span  id="from">-</span><img
+                   src="../../../assets/images/icon-fromto.png" class="fromto"><span
+                   id="to">-</span></td>
+            </tr>
+            <tr  id="tempTr">
+              <td  id="createDate" class="align-L">2025-03-20 13:43:59</td>
+              <td  id="deposit" class="green">0.02</td>
+              <td  id="withdraw" class="red">-</td>
+              <td  id="balance">44.63</td><!---->
+              <td  id="remark">Cricket / Thane Tigers v Koparkairne Titans / Fancy / Tied
+                Match / 1.241057058 / No</td><!---->
+              <td ><span  id="from">-</span><img
+                   src="../../../assets/images/icon-fromto.png" class="fromto"><span
+                   id="to">-</span></td>
+            </tr>
+            <tr  id="tempTr">
+              <td  id="createDate" class="align-L">2025-03-20 12:44:15</td>
+              <td  id="deposit" class="green">-</td>
+              <td  id="withdraw" class="red">-1.00</td>
+              <td  id="balance">44.61</td><!---->
+              <td  id="remark">Cricket / Thane Tigers v Koparkairne Titans / Fancy / 1st
+                innings over 7 - Thane Tigers total / 740829714 / under 7.5</td><!---->
+              <td ><span  id="from">-</span><img
+                   src="../../../assets/images/icon-fromto.png" class="fromto"><span
+                   id="to">-</span></td>
+            </tr>
+            <tr  id="tempTr">
+              <td  id="createDate" class="align-L">2025-03-18 10:56:14</td>
+              <td  id="deposit" class="green">0.62</td>
+              <td  id="withdraw" class="red">-</td>
+              <td  id="balance">45.61</td><!---->
+              <td  id="remark">Cricket / New Zealand v Pakistan / Match / New Zealand v
+                Pakistan / 34129196 / New Zealand</td><!---->
+              <td ><span  id="from">-</span><img
+                   src="../../../assets/images/icon-fromto.png" class="fromto"><span
+                   id="to">-</span></td>
+            </tr>
+            <tr  id="tempTr">
+              <td  id="createDate" class="align-L">2025-03-18 07:41:32</td>
+              <td  id="deposit" class="green">0.95</td>
+              <td  id="withdraw" class="red">-</td>
+              <td  id="balance">44.99</td><!---->
+              <td  id="remark">Cricket / New Zealand v Pakistan / Fancy / Who will win the
+                Toss / 34129196-733518.FY / New Zealand</td><!---->
+              <td ><span  id="from">-</span><img
+                   src="../../../assets/images/icon-fromto.png" class="fromto"><span
+                   id="to">-</span></td>
+            </tr>
+            <tr  id="tempTr">
+              <td  id="createDate" class="align-L">2025-03-17 23:01:56</td>
+              <td  id="deposit" class="green">-</td>
+              <td  id="withdraw" class="red">-1.00</td>
+              <td  id="balance">44.04</td><!---->
+              <td  id="remark">Cricket / Paarl Royals SRL T20 v MI Cape Town SRL T20 / Fancy
+                / Who will win the Toss / -10815100-953907.FY / MI Cape Town SRL T20</td><!---->
+              <td ><span  id="from">-</span><img
+                   src="../../../assets/images/icon-fromto.png" class="fromto"><span
+                   id="to">-</span></td>
+            </tr>
+            <tr  id="tempTr">
+              <td  id="createDate" class="align-L">2025-03-17 21:51:32</td>
+              <td  id="deposit" class="green">0.86</td>
+              <td  id="withdraw" class="red">-</td>
+              <td  id="balance">45.04</td><!---->
+              <td  id="remark">Cricket / Vashi Warriors v Thane Tigers / Match / Vashi
+                Warriors v Thane Tigers / 34126677 / Vashi Warriors</td><!---->
+              <td ><span  id="from">-</span><img
+                   src="../../../assets/images/icon-fromto.png" class="fromto"><span
+                   id="to">-</span></td>
+            </tr>
+            <tr  id="tempTr">
+              <td  id="createDate" class="align-L">2025-03-17 17:40:16</td>
+              <td  id="deposit" class="green">0.52</td>
+              <td  id="withdraw" class="red">-</td>
+              <td  id="balance">44.18</td><!---->
+              <td  id="remark">Tennis / A Santamarta Roig v Mi Damas / Match / A Santamarta
+                Roig v Mi Damas / 34129706 / Miguel Damas</td><!---->
+              <td ><span  id="from">-</span><img
+                   src="../../../assets/images/icon-fromto.png" class="fromto"><span
+                   id="to">-</span></td>
+            </tr>
+            <tr  id="tempTr">
+              <td  id="createDate" class="align-L">2025-03-17 14:48:12</td>
+              <td  id="deposit" class="green">1.00</td>
+              <td  id="withdraw" class="red">-</td>
+              <td  id="balance">43.66</td><!---->
+              <td  id="remark">AWC Casino / KM-TABLE-028 / sud-NrX4yoRt / 7 Up 7 Down /
+                67d7e8c11c695d000fc21f70 / -</td><!---->
+              <td ><span  id="from">-</span><img
+                   src="../../../assets/images/icon-fromto.png" class="fromto"><span
+                   id="to">-</span></td>
+            </tr><!---->
+          </tbody>
+        </table>
+        <div >
+          <ul  id="pageNumberContent" class="pages">
+            <li  id="prev"><a  class="disable">Prev </a></li>
+            <li  id="pageNumber"><a  class="select">1</a></li>
+            <li  id="pageNumber"><a >2</a></li>
+            <li  id="pageNumber"><a >3</a></li>
+            <li  id="pageNumber"><a >4</a></li>
+            <li  id="pageNumber"><a >5</a></li><!---->
+            <li  id="next"><a  class="disable">Next </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div><!---->
+

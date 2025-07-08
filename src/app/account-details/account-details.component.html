@@ -1,0 +1,24 @@
+<div  class="mian-wrap">
+
+    <div  class="path-wrap">
+      <p  class="account-id"><span >bet36user2</span><span
+           class="time-zone">GMT+5:30</span></p>
+    </div>
+    <ul  class="menu-list">
+      <li ><a  routerLink="/myAccount/my-profile">My Profile</a></li>
+      <li ><a  routerLink="/myAccount/balance-overview">Balance
+          Overview</a></li>
+       <li ><a  routerLink="/myAccount/account-statement"> Account statement</a></li>
+      <li ><a  routerLink="/myAccount/mybet">My Bets</a></li>
+      <li ><a  routerLink="/myAccount/bet-history/Odds">Bets History</a>
+      </li>
+      <li ><a  routerLink="/myAccount/profit-loss/Odds">Profit &amp;
+          Loss</a></li>
+      <li ><a  routerLink="/myAccount/checkresults">Results</a></li>
+      <li ><a  routerLink="/myAccount/activity-log">Activity Log</a>
+      </li>
+    </ul>
+    <a  id="logout" class="logout" *ngIf="(authService.isLoggedIn$ | async)" (click)="logout()">LOGOUT</a>
+
+  </div>
+

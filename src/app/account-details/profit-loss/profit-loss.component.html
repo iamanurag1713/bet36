@@ -1,0 +1,140 @@
+
+  <div  class="parent">
+    <div  class="main_wrap">
+
+        <div  class="col-left">
+          <div  class="sub_path">
+            <div  class="path"><a routerLink="#path-pop"
+                class="path-back">...</a>
+              <ul >
+                <li  class="path-last"><a routerLink="#">My Account
+                  </a></li>
+              </ul>
+            </div>
+            <ul  id="path-pop" class="path-pop"></ul>
+            <ul  class="menu-list">
+              <li ><a  id="sub_menu_detail"
+                  routerlinkactive="select"routerLink="/myAccount/my-profile">My Profile </a></li>
+              <li ><a  id="sub_menu_summary"
+                  routerlinkactive="select"routerLink="/myAccount/balance-overview">Balance Overview </a></li>
+              <li ><a  id="sub_menu_accountCashStatement_log"
+                  routerlinkactive="select"routerLink="/myAccount/account-statement">Account Statement </a></li>
+              <li ><a  id="sub_menu_my_bets"
+                  routerlinkactive="select"routerLink="/myAccount/mybet">My Bets </a></li>
+              <li ><a  id="sub_menu_my_bets"
+                  routerlinkactive="select"routerLink="/myAccount/bet-history/Odds">Bets History </a></li>
+              <li ><a  id="sub_menu_my_bets"
+                  routerlinkactive="select"routerLink="/myAccount/profit-loss/Odds" class="select">Profit &amp; Loss </a>
+              </li>
+              <li ><a  id="sub_menu_activity_log"
+                  routerlinkactive="select"routerLink="/myAccount/checkresults">Results </a></li>
+              <li ><a  id="sub_menu_activity_log"
+                  routerlinkactive="select"routerLink="/myAccount/activity-log">Activity Log </a></li>
+            </ul>
+          </div>
+        </div>
+      <div  class="col-center report">
+        <h2 >My Bets</h2>
+        <ul  class="tab col3">
+          <li ><a routerLink="/myAccount/mybet">Current Bets</a></li>
+          <li ><a routerLink="/myAccount/bet-history/Odds">Bets
+              History</a></li>
+          <li ><a  class="select"
+             routerLink="/myAccount/profit-loss/Odds">Profit &amp; Loss</a></li>
+        </ul>
+        <div  class="white-wrap">
+          <h3 >Profit &amp; Loss - Main wallet</h3>
+          <ul  class="acc-info">
+            <li  class="user">bet36user2</li>
+            <li  class="time">2025-06-18 11:13</li>
+          </ul>
+          <ul  class="report-tab-wrap" style="display: block;">
+            <li  routerlinkactive="select" class="report-tab select" tabindex="0">Exchange
+            </li>
+            <li  routerlinkactive="select" class="report-tab" tabindex="0">FancyBet</li>
+            <li  routerlinkactive="select" class="report-tab" tabindex="0">Fancy1Bet</li>
+            <li  routerlinkactive="select" class="report-tab" tabindex="0">TossBet</li>
+            <li  routerlinkactive="select" class="report-tab" tabindex="0">Casino</li>
+            <li  routerlinkactive="select" class="report-tab" tabindex="0">Sportsbook</li>
+            <li  routerlinkactive="select" class="report-tab" tabindex="0">BookMaker</li>
+            <li  routerlinkactive="select" class="report-tab" tabindex="0">Premium</li>
+            <li  routerlinkactive="select" class="report-tab" tabindex="0">Other</li>
+            <li  routerlinkactive="select" class="report-tab" tabindex="0">SABA SPORTS</li>
+          </ul>
+          <div  class="function-wrap">
+            <form  novalidate="" class="ng-untouched ng-pristine ng-valid">
+              <ul  class="input-list">
+                <div  id="statusCondition" style="display: none;">
+                  <li ><label >Bet Status:</label></li>
+                  <li ><select  name="betStatus"
+                      id="betStatus"></select></li>
+                </div>
+                <li ><label >Period</label></li>
+                <li ><input  id="startDate" type="date"
+                    placeholder="YYYY-MM-DD" formcontrolname="startDate"
+                    class="cal-input ng-untouched ng-pristine ng-valid"><input
+                    id="startTime" type="text" placeholder="09:00" formcontrolname="startTime"
+                    class="time-input ng-untouched ng-pristine ng-valid"> to <input
+                    id="endDate" type="date" placeholder="YYYY-MM-DD" formcontrolname="endDate"
+                    class="cal-input ng-untouched ng-pristine ng-valid"><input  id="endTime"
+                    type="text" placeholder="08:59" formcontrolname="endTime"
+                    class="time-input ng-untouched ng-pristine ng-valid"></li>
+                <li  style="display: none;">(TimeZone:IST)</li>
+                <div  id="inPlayCondition" style="display: none;">
+                  <li ><label >inPlay:</label></li>
+                  <li ><select  name="inPlayStatus"
+                      id="inPlayStatus">
+                      <option  value="0">All</option>
+                      <option  value="1">Yes</option>
+                      <option  value="2">No</option>
+                    </select></li>
+                </div>
+              </ul>
+              <ul  class="input-list">
+                <li ><a  id="today" class="btn">Just For
+                    Today</a></li>
+                <li ><a  id="yesterday" class="btn">From
+                    Yesterday</a></li>
+                <li ><button  id="getPL" type="submit"
+                    class="btn-send">Get P &amp; L</button></li>
+              </ul>
+            </form>
+          </div>
+          <div  id="noReportMessage">
+            <p >Betting Profit &amp; Loss enables you to review the bets you have placed.
+              <br >Specify the time period during which your bets were placed, the type of
+              markets on which the bets were placed, and the sport.</p>
+            <p >Betting Profit &amp; Loss is available online for the past 62 days.</p>
+            <p >User can search up to 14 days records per query only .</p>
+          </div>
+        </div>
+        <div  id="casinoReport" style="display: block;">
+          <ul  class="total-show">
+            <li  id="casinoTotalPL"></li>
+          </ul>
+          <table  class="table01 table-pnl">
+            <tbody >
+              <tr >
+                <th  width="" class="align-L">Market</th>
+                <th  width="15%"></th>
+                <th  width="15%">Settled Date</th>
+                <th  width="18%">Profit/Loss</th>
+              </tr><!---->
+            </tbody>
+          </table>
+        </div>
+        <div >
+          <ul  id="pageNumberContent" class="pages">
+            <li  id="prev"><a  class="disable">Prev </a></li>
+            <li  id="pageNumber"><a  class="select">1</a></li>
+            <li  id="pageNumber"><a >2</a></li>
+            <li  id="pageNumber"><a >3</a></li>
+            <li  id="pageNumber"><a >4</a></li>
+            <li  id="pageNumber"><a >5</a></li><!---->
+            <li  id="next"><a >Next </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div><!---->
+

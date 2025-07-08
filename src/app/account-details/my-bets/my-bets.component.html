@@ -1,0 +1,94 @@
+
+  <div  class="parent">
+    <div  class="main_wrap">
+
+        <div  class="col-left">
+          <div  class="sub_path">
+            <div  class="path"><a routerLink="#path-pop"
+                class="path-back">...</a>
+              <ul >
+                <li  class="path-last"><a routerLink="#">My Account
+                  </a></li>
+              </ul>
+            </div>
+            <ul  id="path-pop" class="path-pop"></ul>
+            <ul  class="menu-list">
+              <li ><a  id="sub_menu_detail"
+                  routerlinkactive="select"routerLink="/myAccount/my-profile">My Profile </a></li>
+              <li ><a  id="sub_menu_summary"
+                  routerlinkactive="select"routerLink="/myAccount/balance-overview">Balance Overview </a></li>
+              <li ><a  id="sub_menu_accountCashStatement_log"
+                  routerlinkactive="select"routerLink="/myAccount/account-statement">Account Statement </a></li>
+              <li ><a  id="sub_menu_my_bets"
+                  routerlinkactive="select"routerLink="/myAccount/mybet" class="select">My Bets </a></li>
+              <li ><a  id="sub_menu_my_bets"
+                  routerlinkactive="select"routerLink="/myAccount/bet-history/Odds">Bets History </a></li>
+              <li ><a  id="sub_menu_my_bets"
+                  routerlinkactive="select"routerLink="/myAccount/profit-loss/Odds">Profit &amp; Loss </a></li>
+              <li ><a  id="sub_menu_activity_log"
+                  routerlinkactive="select"routerLink="/myAccount/checkresults">Results </a></li>
+              <li ><a  id="sub_menu_activity_log"
+                  routerlinkactive="select"routerLink="/myAccount/activity-log">Activity Log </a></li>
+            </ul>
+          </div>
+        </div>
+
+      <div  class="col-center report">
+        <h2 >My Bets</h2>
+        <ul  class="tab col3">
+          <li ><a  class="select"routerLink="/myAccount/mybet">Current
+              Bets</a></li>
+          <li ><a routerLink="/myAccount/bet-history/Odds">Bets
+              History</a></li>
+          <li ><a routerLink="/myAccount/profit-loss/Odds">Profit &amp;
+              Loss</a></li>
+        </ul>
+        <ul  class="report-tab-wrap" style="display: block;">
+          <li  class="report-tab select">Exchange</li>
+          <li  class="report-tab">FancyBet</li>
+          <li  class="report-tab">Fancy1Bet</li>
+          <li  class="report-tab">TossBet</li>
+          <li  class="report-tab">CasinoBet</li>
+          <li  class="report-tab">Sportsbook</li>
+          <li  class="report-tab">BookMaker</li>
+          <li  class="report-tab">Premium</li>
+          <li  class="report-tab">Other</li>
+          <li  class="report-tab">SABA SPORTS</li>
+        </ul>
+        <div  class="function-wrap">
+          <ul  class="input-list">
+            <li ><label >Bet Status</label></li>
+            <li ><select  id="betStatus">
+                <option  value="">All</option>
+                <option  value="Unmatched">Unmatched</option>
+                <option  value="Matched">Matched</option>
+              </select></li>
+            <li ></li>
+            <li ><label >Order By</label></li>
+            <li ><input  id="orderBetPlaced" type="checkbox"
+                checked=""><label  for="orderBetPlaced">Bet placed </label><input
+                 id="orderMarket" type="checkbox"><label
+                for="orderMarket">Market </label></li>
+          </ul>
+        </div>
+        <table  id="Matched_Table" class="table-s" style="line-height: 15px;">
+          <caption >Matched</caption>
+          <tbody >
+            <tr >
+              <th  id="Matched_market" width="" class="align-L">Market</th>
+              <th  id="Matched_selection" width="10%">Selection</th>
+              <th  id="Matched_type" width="3%">Type</th>
+              <th  id="Matched_betId" width="9%">Bet ID</th>
+              <th  id="Matched_betPlaced" width="8%">Bet placed</th>
+              <th  id="Matched_oddsReq" width="8%">Odds req.</th>
+              <th  id="Matched_matched" width="9%">Matched</th>
+              <th  id="Matched_unMatched" width="10%" style="display: none;">Unmatched</th>
+              <th  id="Matched_avgOdds" width="10%">Avg. odds matched</th>
+              <th  id="Matched_dateMatched" width="10%">Date matched</th>
+            </tr>
+          </tbody>
+          <tbody  id="Matched_Content"><!----></tbody>
+        </table>
+      </div>
+    </div>
+  </div><!---->
