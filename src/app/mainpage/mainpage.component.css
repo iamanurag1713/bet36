@@ -17054,3 +17054,64 @@ h4 .info-icon{
     background-size: contain;
     margin: 2.1333333333vw 1.8666666667vw .5333333333vw;
 }
+
+
+.bgimage {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.hide {
+    display: none;
+}
+
+
+.zoomed_mode {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+    max-height: 100%;
+    width: 100%;
+}
+.video-js {
+    display: block;
+    vertical-align: top;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #000;
+    position: relative;
+    padding: 0;
+    font-size: 10px;
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    word-break: initial;
+}
+
+video {
+    object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+
+.tv-control .close:before {
+    width: 3.7333333333vw;
+    height: 3.7333333333vw;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="9"><path fill="rgb(207,209,206)" fill-rule="evenodd" d="M9 .912L5.412 4.5 9 8.088 8.088 9 4.5 5.412.912 9 0 8.088 3.588 4.5 0 .912.912 0 4.5 3.588 8.088 0z"/></svg>');
+}
+
+.tv-control a:before {
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+

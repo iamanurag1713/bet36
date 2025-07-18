@@ -26,7 +26,7 @@ export const routes: Routes = [
   {path : 'mob-inplay/tomorrow' , component: MobInplaytomorrowComponent},
   {path : 'mob-sport' , component: MobSportComponent},
   {path : 'mob-login' , component: MobLoginComponent},
-  {path : 'match/:eventid' , component : MainpageComponent},
+  {path : 'match/:sportId/:eventid' , component : MainpageComponent},
   {path : 'mob-multiMarket' , component: MultimarketComponent},
   {path: 'mob-myProfile' , component: AccountDetailsComponent},
   {path: 'myAccount/my-profile', component: MyprofileComponent},

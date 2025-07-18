@@ -56,11 +56,19 @@ export class InPlayService {
     return this.http.post(`${this.baseUrl}/getGamesList`, { sportId });
   }
 
-  getMatchByEventId(eventid: string): Observable<any> {
-    return this.http.post(`https://score1api.365cric.com/getMatchByEventId`, {
-      eventid,
-    });
-  }
+  // getMatchByEventId(eventid: string): Observable<any> {
+  //   return this.http.post(`https://score1api.365cric.com/getMatchByEventId`,
+  //    {eventid},
+  //     { headers: { 'Content-Type': 'application/json' }}
+  //   );
+  // }
+
+getMatchByEventId(eventId: string): Observable<any> {
+  const fullUrl = 'https://score1api.365cric.com/getMatchByEventId'; // 👈 Full URL
+  const payload = { eventid: eventId };
+  return this.http.post(fullUrl, payload); 
+}
+
   getUserBalanceExpo(): Observable<UserBalanceResponse> {
     return this.http.post<UserBalanceResponse>(
       `${this.baseUrl}/getUserBalanceExpo`,
@@ -116,8 +124,11 @@ export class InPlayService {
     return this.http.get<any>(url);
   }
 
- 
+
   getEventDataOnLoad(eventid: string): Observable<any> {
     return this.http.post(`${this.baseUrl}/getEventDataOnLoad`, { eventid });
   }
+
+
+
 }

@@ -87,7 +87,7 @@
     <ng-container *ngIf="selectedView === 'time'">
 
       <ul id="highlightList" class="highlight-list">
-        <li class="inplay-on" *ngFor="let game of games"><a id="info" [routerLink]="['/match', game.eventid]">
+        <li class="inplay-on" *ngFor="let game of games"><a id="info" [routerLink]="['/match', game.sportId , game.eventid]">
             <dl>
               <dt><span id="streamingIcon" class="game-live" style="display: flex;">game-live</span><span
                   id="fancyBetIcon" class="game-fancy in-play" style="display: flex;">
@@ -107,10 +107,10 @@
 
     <ng-container *ngIf="selectedView === 'competition'">
       <!-- Competition-specific UI -->
-      <div class="sortinglist-wrap filterbycomp" style="display: block;">
-        <h4>{{ games[0]?.seriesname }}</h4>
+      <div  *ngFor="let seriesName of (groupedGames | sortCompetitionsByTime)" class="sortinglist-wrap filterbycomp" style="display: block;">
+        <h4>{{ seriesName.key }}</h4>
         <ul id="highlightList" class="highlight-list" style="margin-bottom: 0;">
-          <li class="inplay-on" *ngFor="let game of games"><a id="info">
+          <li class="inplay-on" *ngFor="let game of seriesName.value"><a id="info">
               <dl>
                 <dt><span id="streamingIcon" class="game-live" style="display: flex;">game-live</span><span
                     id="fancyBetIcon" class="game-fancy in-play" style="display: flex;">
@@ -123,7 +123,7 @@
                   </span>
                   <!---->
                 </dt><!----><!---->
-                <dd id="eventName" [routerLink]="['/match', game.eventid]">{{ game.matchname }}</dd>
+                <dd id="eventName" [routerLink]="['/match', game.sportId || sportId, game.eventid]">{{ game.matchname }}</dd>
               </dl>
             </a><!----><a routerlink="/mob-login" class="add-pin pin-off" routerLink="/mob-login"></a><!----></li>
           <!----><!---->

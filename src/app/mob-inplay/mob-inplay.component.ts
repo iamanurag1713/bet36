@@ -17,7 +17,7 @@ export class MobInplayComponent implements OnInit {
   soccerGames: any[] = [];
   tennisGames: any[] = [];
   activeTab: string = 'cricket';
-
+  
   constructor(
     private inPlayService: InPlayService,
     public auth: AuthService,
@@ -28,15 +28,20 @@ export class MobInplayComponent implements OnInit {
     this.inPlayService.getInPlayGames().subscribe({
       next: (data) => {
         this.inPlayGames = data;
-        this.cricketGames = data.filter((g) => g.sportid === 1);
-        this.soccerGames = data.filter((g) => g.sportid === 3);
+        this.cricketGames = data.filter((g) => g.sportid === 4);
+        this.soccerGames = data.filter((g) => g.sportid === 1);
         this.tennisGames = data.filter((g) => g.sportid === 2);
       },
       error: (err) => {
         console.error('API error', err);
       },
     });
+
+
+
   }
+
+
 
   setActive(tab: string) {
     this.activeTab = tab;

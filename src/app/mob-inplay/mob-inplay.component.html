@@ -20,9 +20,8 @@
         Cricket</h3>
       <ul id="inPlayList_4" class="highlight-list">
 
-
         <li class="inplay-on" *ngFor="let game of cricketGames">
-          <a [routerLink]="['/match', game.eventid]">
+          <a [routerLink]="['/match', game.sportId , game.eventid]">
             <dl>
               <dt>
                 <span class="game-live" style="display: flex;">game-live</span>
@@ -32,7 +31,7 @@
                 <span class="game-bookmaker in-play" style="display: flex;">
                   <pre>in-play</pre>BookMaker
                 </span>
-                <span class="game-sportsbook" style="display: flex;">Premium Cricket</span>
+                <span class="game-sportsbook" style="display: flex;">Premium Soccer</span>
                 <span class="time">In-Play</span>
                 <span class="game-E" style="display: flex;"><i></i>Cricket</span>
               </dt>
@@ -42,8 +41,14 @@
           <a class="add-pin pin-off" routerLink="/mob-login"></a>
         </li>
 
+
+
       </ul>
     </div><!---->
+
+    <div id="inplayVirtualCricketImage" class="footer-kv"><a id="inplayVirtualCricketEntrance" neua="BetRadar Banner"
+        class="entrance" style="cursor: pointer;"><img src="../../../../assets/images/kv-virtual-cricket-m.jpg" alt=""
+          draggable="false" style="width: 100%;"></a></div>
 
 
     <!-- ⚽ SOCCER SECTION -->
@@ -52,23 +57,28 @@
         style="background-image: linear-gradient(-180deg, rgb(46, 75, 94) 0%, rgb(36, 58, 72) 82%); color: rgb(255, 255, 255);">
         Soccer
       </h3>
-      <ul class="highlight-list">
-        <ng-container *ngFor="let game of inPlayGames">
-          <li class="inplay-on" *ngFor="let game of soccerGames">
-            <a routerLink="/match/:eventid">
-              <dl>
-                <dt>
-                  <span class="game-live" style="display: flex;">game-live</span>
-                  <span class="game-sportsbook" style="display: flex;">Premium Soccer</span>
-                  <span class="time">In-Play</span>
-                  <span class="game-E" style="display: flex;"><i></i>Soccer</span>
-                </dt>
-                <dd id="eventName">{{ game.matchname }}</dd>
-              </dl>
-            </a>
-            <a class="add-pin pin-off" routerLink="/mob-login"></a>
-          </li>
-        </ng-container>
+      <ul id="inPlayList_4" class="highlight-list">
+        <li class="inplay-on" *ngFor="let game of soccerGames">
+          <a [routerLink]="['/match', game.sportId , game.eventid]">
+            <dl>
+              <dt>
+                <span class="game-live" style="display: flex;">game-live</span>
+                <span class="game-fancy in-play" style="display: flex;">
+                  <pre>in-play</pre>Fancy
+                </span>
+                <span class="game-bookmaker in-play" style="display: flex;">
+                  <pre>in-play</pre>BookMaker
+                </span>
+                <span class="game-sportsbook" style="display: flex;">Premium Soccer</span>
+                <span class="time">In-Play</span>
+                <span class="game-E" style="display: flex;"><i></i>Soccer</span>
+              </dt>
+              <dd id="eventName">{{ game.matchname }}</dd>
+            </dl>
+          </a>
+          <a class="add-pin pin-off" routerLink="/mob-login"></a>
+        </li>
+
       </ul>
     </div>
 
@@ -83,7 +93,7 @@
         Tennis</h3>
       <ul class="highlight-list">
         <li class="inplay-on" *ngFor="let game of tennisGames">
-          <a  [routerLink]="['/match', game.eventid]">
+          <a [routerLink]="['/match', game.sportId , game.eventid]">
             <dl>
 
               <dt>

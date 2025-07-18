@@ -1,9 +1,28 @@
 <div class="mian-wrap">
+
+  <!-- <video id="video" class="zoomed_mode video-js vjs" controls="" muted="" autoplay="" playsinline=""
+    disablepictureinpicture="" controlslist="nodownload"
+    src="blob:https://e765432.xyz/c23f3f9c-4014-4fdc-8c51-0b89fc4a946e"></video>
+    <div id="iframe-div">
+        </div> -->
+
+
+  <div id="tv" class="tv">
+    <ul class="tv-control">
+      <li><a id="closeStreamingBox" class="close" style="display: flex;">Close</a></li>
+    </ul>
+    <div class="tvposition">
+      <div class="col block"><iframe title="Score" allowfullscreen="true" class="tvlive"
+          src="https://e765432.xyz/static/c2710185a47c5d54748a15e57d6d95b83849a23e/getdata.php?chid="></iframe></div>
+    </div>
+  </div>
   <div class="game-wrap">
     <div id="matchTrackerWrap" class="match-tracker-wrap">
 
 
-      <h4 id="gameInfo" class="game-info"><span style="width: 73vw;">Cricket</span><!----><!---->
+
+
+      <h4 id="gameInfo" class="game-info"><span style="width: 73vw;">{{ sportName }}</span><!----><!---->
         <ul id="infoIcon" class="info-icon">
           <li id="inPlayIcon"><img
               src="data:image/gif;base64,R0lGODdhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -19,9 +38,17 @@
         </ul>
       </h4>
 
-      <div class="col block"><iframe title="Score" allowfullscreen="true" class="scorelive"
-          src="https://score1.365cric.com/#/score1/34490055?v=8006"></iframe>
+      <!-- <div class="col block"><iframe title="Score" allowfullscreen="true" class="scorelive"
+          src="https://score1.365cric.com/#/score4/10873383?v=8006"></iframe>
+      </div> -->
+
+      <div class="col block">
+        <iframe title="Score" allowfullscreen="true" class="scorelive" [src]="iframeSrc | safeUrl">
+        </iframe>
       </div>
+
+
+
       <ul class="match-btn" *ngIf="isLoggedIn">
         <li><a id="liveMultiMarketPin" name="gameHeadPin" class="btn-pin" style="cursor: pointer;">Pin</a></li>
         <li><a class="btn-refresh" style="cursor: pointer;">Refresh</a></li>
@@ -50,37 +77,26 @@
       <dd class="mode-land"></dd>
       <dd class="mode-land"></dd>
     </dl>
-    <div id="Odds0Oddsundefined{{team1}}">
-      <dl class="bets-selections" style="display: flex;">
-        <dt>
-          <h4 id="runnerName">{{team1}}</h4><!----><!----><!---->
-        </dt>
-        <dd id="suspend" class="suspend" style="display: none;">
-          <p>Suspend</p>
-        </dd>
-        <dd id="closed" class="suspend" style="display: none;">
-          <p>Closed</p>
-        </dd>
-        <dd id="nonRunner" class="suspend" style="display: none;">
-          <p>Non Runner</p>
-        </dd><!---->
-        <div *ngFor="let match of matches">
-          <dd id="back_1" class="">
-            <a class="back-1 spark">
-              {{ match.fancy?.backPrice || '1.42' }}
-              <span>{{ match.fancy?.backStake || '10537.5' }}</span>
-            </a>
-          </dd>
+    <div class="match-info" *ngIf="matches[0]">
+      <h4>{{ matches[0].team1 }} vs {{ matches[0].team2 }}</h4>
 
-          <dd id="lay_1" class="">
-            <a class="lay-1 spark">
-              {{ match.fancy?.layPrice || '1.43' }}
-              <span>{{ match.fancy?.layStake || '0' }}</span>
-            </a>
-          </dd>
-        </div>
-      </dl><!----><!---->
+      <dl class="bets-selections" style="display: flex;">
+        <dd id="back_1" class="">
+          <a class="back-1 spark">
+            {{ matches[0].fancy.backPrice }}
+            <span>{{ matches[0].fancy.backStake }}</span>
+          </a>
+        </dd>
+
+        <dd id="lay_1" class="">
+          <a class="lay-1 spark">
+            {{ matches[0].fancy.layPrice }}
+            <span>{{ matches[0].fancy.layStake }}</span>
+          </a>
+        </dd>
+      </dl>
     </div>
+
     <div id="Odds1Oddsundefined{{team2 }}">
       <dl class="bets-selections" style="display: flex;">
         <dt>
@@ -94,11 +110,11 @@
         </dd>
         <dd id="nonRunner" class="suspend" style="display: none;">
           <p>Non Runner</p>
-        </dd><!---->
+        </dd>
         <dd id="back_1" class=""><a class="back-1 spark">3.35<span> 21.34</span></a></dd>
-        <dd id="lay_1" class=""><a class="lay-1 spark">3.4<span> 4584.2</span></a></dd><!----><!---->
-      </dl><!----><!---->
-    </div><!---->
+        <dd id="lay_1" class=""><a class="lay-1 spark">3.4<span> 4584.2</span></a></dd>
+      </dl>
+    </div>
   </div>
   <div id="bookMakerWrap">
     <div class="bets-wrap bets-bookmaker" style="display: block;">

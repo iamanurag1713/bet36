@@ -29,8 +29,8 @@ export class MobInplaytomorrowComponent implements OnInit {
     this.inplayService.getTomorrowGames().subscribe({
       next: (games) => {
         this.tomorrowGames = games;
-        this.cricketGames = games.filter((g) => g.sportid === 1);
-        this.soccerGames = games.filter((g) => g.sportsid === 3);
+        this.cricketGames = games.filter((g) => g.sportid === 4);
+        this.soccerGames = games.filter((g) => g.sportid === 1);
         this.tennisGames = games.filter((g) => g.sportid === 2);
       },
 

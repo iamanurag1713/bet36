@@ -20,7 +20,7 @@
       <ul id="inPlayList_4" class="highlight-list">
 
         <li class="inplay-on" *ngFor="let game of cricketGames">
-          <a [routerLink]="['/match', game.eventid]">
+          <a [routerLink]="['/match', game.sportId, game.eventid]">
             <dl>
               <dt>
                 <span class="game-live" style="display: flex;">game-live</span>
@@ -33,21 +33,29 @@
           </a>
           <a routerLink="/mob-login" class="add-pin pin-off"></a>
         </li>
+
+
       </ul>
     </div><!---->
+
+    <div id="inplayVirtualCricketImage" class="footer-kv"><a id="inplayVirtualCricketEntrance" neua="BetRadar Banner"
+        class="entrance" style="cursor: pointer;"><img src="../../../../assets/images/kv-virtual-cricket-m.jpg" alt=""
+          draggable="false" style="width: 100%;"></a></div>
+
     <div id="inplayVirtualCricketImage" class="footer-kv"><a id="inplayVirtualCricketEntrance"
         routerLink="javascript:CommonTransferWalletHandler.openDepositPage('1', 'BetRadar', 'SPORTRADAR', '', 'SPORTRADAR_VIRTUAL_001', '', true)"
         neua="BetRadar Banner" class="entrance" style="cursor: pointer;"><img
           src="../../../../assets/images/mobile/promo/kv-virtual-cricket-m.jpg" alt="" draggable="false"
           style="width: 100%;"></a></div>
-    <div id="inPlayEventType_1" *ngIf="soccerGames.length > 0" style="display: block;">
+    <div id="inPlayEventType_3" style="display: block;" *ngIf="soccerGames.length > 0">
       <h3 class="myHead"
         style="background-image: linear-gradient(-180deg, rgb(46, 75, 94) 0%, rgb(36, 58, 72) 82%); color: rgb(255, 255, 255);">
-        Soccer</h3>
+        Soccer
+      </h3>
       <ul id="inPlayList_1" class="highlight-list">
 
         <li class="inplay-on" *ngFor="let game of soccerGames">
-          <a routerLink="/match/:eventid">
+          <a [routerLink]="['/match', game.sportId, game.eventid]">
             <dl>
               <dt>
                 <span class="game-live" style="display: flex;">game-live</span>
@@ -60,8 +68,9 @@
           </a>
           <a routerLink="/mob-login" class="add-pin pin-off"></a>
         </li>
-
       </ul>
+
+
     </div><!----><!---->
 
 
@@ -71,7 +80,7 @@
       </h3>
       <ul class="highlight-list">
         <li class="inplay-on" *ngFor="let game of tennisGames">
-          <a [routerLink]="['/match', game.eventid]">
+          <a [routerLink]="['/match', game.sportId, game.eventid]">
             <dl>
               <dt>
                 <span class="game-live" style="display: flex;">game-live</span>
