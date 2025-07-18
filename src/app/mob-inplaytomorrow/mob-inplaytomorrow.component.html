@@ -20,7 +20,7 @@
       <ul id="inPlayList_4" class="highlight-list">
 
         <li class="inplay-on" *ngFor="let game of cricketGames">
-          <a [routerLink]="['/match', game.sportId, game.eventid]">
+          <a [routerLink]="['/match', game.sportid, game.eventid]">
             <dl>
               <dt>
                 <span class="game-live" style="display: flex;">game-live</span>
@@ -55,7 +55,7 @@
       <ul id="inPlayList_1" class="highlight-list">
 
         <li class="inplay-on" *ngFor="let game of soccerGames">
-          <a [routerLink]="['/match', game.sportId, game.eventid]">
+          <a [routerLink]="['/match', game.sportid, game.eventid]">
             <dl>
               <dt>
                 <span class="game-live" style="display: flex;">game-live</span>
@@ -80,7 +80,7 @@
       </h3>
       <ul class="highlight-list">
         <li class="inplay-on" *ngFor="let game of tennisGames">
-          <a [routerLink]="['/match', game.sportId, game.eventid]">
+          <a [routerLink]="['/match', game.sportid, game.eventid]">
             <dl>
               <dt>
                 <span class="game-live" style="display: flex;">game-live</span>

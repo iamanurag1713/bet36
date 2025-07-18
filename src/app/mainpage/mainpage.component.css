@@ -17115,3 +17115,7 @@ video {
     background-repeat: no-repeat;
 }
 
+/* .disabled dd a {
+    cursor: not-allowed;
+    background: rgba(51, 51, 51, .2) url(bg-disabled.d9ec2a5677779dbb.png);
+} */

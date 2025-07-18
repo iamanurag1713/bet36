@@ -19,7 +19,7 @@
         Cricket</h3>
       <ul id="inPlayList_4" class="highlight-list">
         <li class="inplay-off" *ngFor="let game of soccerGames">
-          <a [routerLink]="['/match', game.sportId, game.eventid]">
+          <a [routerLink]="['/match', game.sportid, game.eventid]">
             <dl>
               <dt>
                 <span class="game-fancy" style="display: flex;">Fancy</span>
@@ -39,7 +39,7 @@
      <div id="inplayVirtualCricketImage" class="footer-kv"><a id="inplayVirtualCricketEntrance" neua="BetRadar Banner"
         class="entrance" style="cursor: pointer;"><img src="../../../../assets/images/kv-virtual-cricket-m.jpg" alt=""
           draggable="false" style="width: 100%;"></a></div>
-          
+
     <div id="inplayVirtualCricketImage" class="footer-kv"><a id="inplayVirtualCricketEntrance"
         routerLink="javascript:CommonTransferWalletHandler.openDepositPage('1', 'BetRadar', 'SPORTRADAR', '', 'SPORTRADAR_VIRTUAL_001', '', true)"
         neua="BetRadar Banner" class="entrance" style="cursor: pointer;"><img
@@ -52,7 +52,7 @@
       <ul id="inPlayList_1" class="highlight-list">
 
          <li class="inplay-off" *ngFor="let game of cricketGames">
-          <a  [routerLink]="['/match', game.sportId, game.eventid]">
+          <a  [routerLink]="['/match', game.sportid, game.eventid]">
             <dl>
               <dt>
                 <span class="game-fancy" style="display: flex;">Fancy</span>
@@ -77,7 +77,7 @@
 
 
         <li class="inplay-off" *ngFor="let game of tennisGames">
-          <a [routerLink]="['/match', game.sportId, game.eventid]">
+          <a [routerLink]="['/match', game.sportid, game.eventid]">
             <dl>
               <dt>
                 <span class="game-sportsbook" style="display: flex;">Tennis Premium</span>

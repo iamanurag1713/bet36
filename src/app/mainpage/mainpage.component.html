@@ -77,10 +77,13 @@
       <dd class="mode-land"></dd>
       <dd class="mode-land"></dd>
     </dl>
-    <div class="match-info" *ngIf="matches[0]">
-      <h4>{{ matches[0].team1 }} vs {{ matches[0].team2 }}</h4>
+    <div class="match-info" id="Odds0Oddsundefined" *ngIf="matches[0]">
 
       <dl class="bets-selections" style="display: flex;">
+        <dt>
+          <h4>{{ matches[0].team1 }}</h4>
+        </dt>
+
         <dd id="back_1" class="">
           <a class="back-1 spark">
             {{ matches[0].fancy.backPrice }}
@@ -97,10 +100,10 @@
       </dl>
     </div>
 
-    <div id="Odds1Oddsundefined{{team2 }}">
+    <div id="Odds1Oddsundefined" class="match-info" *ngIf="matches[0]">
       <dl class="bets-selections" style="display: flex;">
         <dt>
-          <h4 id="runnerName">{{team2}}</h4><!----><!----><!---->
+          <h4 id="runnerName">{{ matches[0].team2 }}</h4><!----><!----><!---->
         </dt>
         <dd id="suspend" class="suspend" style="display: none;">
           <p>Suspend</p>
@@ -131,10 +134,10 @@
         <dd class="mode-land"></dd>
         <dd class="mode-land"></dd>
       </dl>
-      <div id="Book0Odds{{ team1 }}">
+      <div id="Book0Odds" *ngIf="matches[0]">
         <dl class="bets-selections" style="display: flex;">
           <dt>
-            <h4 id="runnerName">{{ team1 }}</h4>
+            <h4 id="runnerName">{{ matches[0].team1 }}</h4>
             <ul>
               <li id="after" class="to-lose"> </li>
             </ul><!----><!----><!---->
@@ -152,10 +155,10 @@
           </dd><!---->
         </dl><!----><!---->
       </div>
-      <div id="Book1Oddsundefined{{team2}}">
+      <div id="Book1Oddsundefined" *ngIf="matches[0]">
         <dl class="bets-selections" style="display: flex;">
           <dt>
-            <h4 id="runnerName">{{team2}}</h4>
+            <h4 id="runnerName">{{matches[0].team2}}</h4>
             <ul>
               <li id="after" class="to-lose"> </li>
             </ul><!----><!----><!---->
@@ -188,10 +191,10 @@
         <dd class="mode-land"></dd>
         <dd class="mode-land"></dd>
       </dl>
-      <div id="Toss0Oddsundefined{{team1}}">
+      <div id="Toss0Oddsundefined" *ngIf="matches[0]">
         <dl class="bets-selections" style="display: flex;">
           <dt>
-            <h4 id="runnerName">{{team1 }}</h4><!---->
+            <h4 id="runnerName">{{matches[0].team1 }}</h4><!---->
           </dt>
           <dd class="backlay_box">
             <dl class="back-gradient">
@@ -204,10 +207,10 @@
         </dl>
 
 
-        <div id="Toss1Oddsundefined{{team2}}">
+        <div id="Toss1Oddsundefined" *ngIf="matches[0]">
           <dl class="bets-selections" style="display: flex;">
             <dt>
-              <h4 id="runnerName">{{team2}}</h4><!---->
+              <h4 id="runnerName">{{matches[0].team2}}</h4><!---->
             </dt>
             <dd class="backlay_box">
               <dl class="back-gradient">

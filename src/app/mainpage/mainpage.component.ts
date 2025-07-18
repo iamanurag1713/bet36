@@ -60,7 +60,7 @@ export class MainpageComponent implements OnInit, OnDestroy {
     };
     return map[id] || 'Unknown';
   }
-  
+
 
   buildIframeSrc() {
     const version = Math.floor(Math.random() * 10000);

@@ -17,7 +17,7 @@ export class MobInplayComponent implements OnInit {
   soccerGames: any[] = [];
   tennisGames: any[] = [];
   activeTab: string = 'cricket';
-  
+
   constructor(
     private inPlayService: InPlayService,
     public auth: AuthService,
@@ -53,4 +53,5 @@ export class MobInplayComponent implements OnInit {
       this.router.navigate(['/mob-login']);
     }
   }
+  
 }
