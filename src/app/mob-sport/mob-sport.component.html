@@ -87,7 +87,7 @@
     <ng-container *ngIf="selectedView === 'time'">
 
       <ul id="highlightList" class="highlight-list">
-        <li class="inplay-on" *ngFor="let game of games"><a id="info" [routerLink]="['/match', game.sportId , game.eventid]">
+        <li [ngClass]="isInPlay(game.day) ? 'inplay-on' : 'inplay-off'" *ngFor="let game of games"><a id="info" [routerLink]="['/match', game.sportId , game.eventid]">
             <dl>
               <dt><span id="streamingIcon" class="game-live" style="display: flex;">game-live</span><span
                   id="fancyBetIcon" class="game-fancy in-play" style="display: flex;">
@@ -95,8 +95,8 @@
                 </span><span id="bookMakerIcon" class="game-bookmaker in-play" style="display: flex;">
                   <pre>in-play</pre>BookMaker
                 </span><span id="sportsBookIcon_2" class="game-sportsbook">Premium
-                  {{ sportName | titlecase }}</span><span id="dateTimeInfo" class="time" style="color: #508D0E;"> {{
-                  isInPlay(game.opendate) ? 'In-Play' : game.time }}
+                  {{ sportName | titlecase }}</span><span id="dateTimeInfo" class="time" [style.color]="isInPlay(game.day) ? '#508D0E' : '#999'"> {{
+                     getDisplayTime(game.day) }}
                 </span><!----></dt>
               <!----><!---->
               <dd id="eventName">{{ game.matchname }}</dd>
@@ -110,7 +110,7 @@
       <div  *ngFor="let seriesName of (groupedGames | sortCompetitionsByTime)" class="sortinglist-wrap filterbycomp" style="display: block;">
         <h4>{{ seriesName.key }}</h4>
         <ul id="highlightList" class="highlight-list" style="margin-bottom: 0;">
-          <li class="inplay-on" *ngFor="let game of seriesName.value"><a id="info">
+          <li [ngClass]="isInPlay(game.opendate) ? 'inplay-on' : 'inplay-off'"   *ngFor="let game of seriesName.value"><a id="info">
               <dl>
                 <dt><span id="streamingIcon" class="game-live" style="display: flex;">game-live</span><span
                     id="fancyBetIcon" class="game-fancy in-play" style="display: flex;">
@@ -118,8 +118,8 @@
                   </span><span id="bookMakerIcon" class="game-bookmaker in-play" style="display: flex;">
                     <pre>in-play</pre>BookMaker
                   </span><span id="sportsBookIcon_2" class="game-sportsbook">Premium
-                    {{ sportName | titlecase }}</span><span id="dateTimeInfo" class="time" style="color: #508D0E;"> {{
-                    isInPlay(game.opendate) ? 'In-Play' : game.time }}
+                    {{ sportName | titlecase }}</span><span id="dateTimeInfo" class="time" [style.color]="isInPlay(game.day) ? '#508D0E' : '#999'"> {{
+                       getDisplayTime(game.day) }}
                   </span>
                   <!---->
                 </dt><!----><!---->

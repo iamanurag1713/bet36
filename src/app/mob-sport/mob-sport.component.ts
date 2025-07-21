@@ -6,6 +6,7 @@ import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import { InPlayService } from '../services/inplay.service';
 import { SortCompetitionsByTimePipe } from '../pipes/sort-competitions-by-time.pipe';
+import { formatDate } from '@angular/common'; // optional if you want custom formatting
 
 @Component({
   selector: 'app-mob-sport',
@@ -72,6 +73,8 @@ export class MobSportComponent {
   });
   }
 
+
+
   setView(view: 'time' | 'competition') {
     this.selectedView = view;
   }
@@ -108,10 +111,25 @@ export class MobSportComponent {
   }
 
   isInPlay(opendate: string): boolean {
-    const start = new Date(opendate).getTime();
-    const now = Date.now();
-    return now >= start;
-  }
+  const gameTime = new Date(opendate).getTime();
+  const now = new Date().getTime();
+   console.log('Now:', new Date(now).toISOString());
+  console.log('Game:', new Date(gameTime).toISOString());
+
+  return now >= gameTime;
+}
+// isInPlay(opendate: string): boolean {
+//   return new Date().getTime() >= new Date(opendate).getTime();
+// }
+formatTo12Hour(opendate: string): string {
+  const date = new Date(opendate);
+
+  return date.toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  });
+}
 
   handleResultClick() {
     if (this.auth.isLoggedIn) {
@@ -120,4 +138,47 @@ export class MobSportComponent {
       this.router.navigate(['/mob-login']);
     }
   }
+
+
+getDisplayTime(opendate: string): string {
+  const now = new Date();
+  const gameDate = new Date(opendate);
+
+  const nowTime = now.getTime();
+  const gameTime = gameDate.getTime();
+
+  // Match is in the past or now
+  if (nowTime >= gameTime) {
+    return 'In-Play';
+  }
+
+  // Format time in 12-hour format
+  const timeOptions: Intl.DateTimeFormatOptions = {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  };
+  const timeStr = gameDate.toLocaleTimeString('en-US', timeOptions);
+
+  // End of today
+  const endOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999);
+  const endOfTomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 23, 59, 59, 999);
+
+  if (gameTime <= endOfToday.getTime()) {
+    return timeStr;
+  }
+
+  if (gameTime <= endOfTomorrow.getTime()) {
+    return `Tomorrow ${timeStr}`;
+  }
+
+   const dateStr = gameDate.toLocaleDateString('en-GB', {
+    day: '2-digit',
+    month: 'short',
+  });
+
+  return `${dateStr}, ${timeStr}`;
+}
+
+
 }

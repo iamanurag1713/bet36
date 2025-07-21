@@ -14,4 +14,10 @@ export class SortCompetitionsByTimePipe implements PipeTransform {
         return timeA - timeB;
       });
   }
+
+
+
+  
 }
+
+
