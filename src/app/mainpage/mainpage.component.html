@@ -24,7 +24,7 @@
 
       <h4 id="gameInfo" class="game-info"><span style="width: 73vw;">{{ sportName }}</span><!----><!---->
         <ul id="infoIcon" class="info-icon">
-          <li id="inPlayIcon"><img
+          <li id="inPlayIcon" *ngIf="matches[0]?.inPlay" ><img
               src="data:image/gif;base64,R0lGODdhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
               class="info-inplay">In-Play</li>
           <!-- <li  id="fancyBetIcon" ><span

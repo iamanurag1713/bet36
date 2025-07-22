@@ -19,13 +19,13 @@
         Cricket</h3>
       <ul id="inPlayList_4" class="highlight-list">
 
-        <li class="inplay-on" *ngFor="let game of cricketGames">
+        <li class="inplay-off" *ngFor="let game of cricketGames">
           <a [routerLink]="['/match', game.sportid, game.eventid]">
             <dl>
               <dt>
                 <span class="game-live" style="display: flex;">game-live</span>
                 <span class="game-sportsbook" style="display: flex;">Premium Cricket</span>
-                <span class="time">{{ game.time }}</span>
+                <span class="time">{{'Tomorrow ' +  game.time}}</span>
                 <span class="game-E" style="display: flex;"><i></i>Cricket</span>
               </dt>
               <dd id="eventName">{{ game.matchname }}</dd>
@@ -54,13 +54,13 @@
       </h3>
       <ul id="inPlayList_1" class="highlight-list">
 
-        <li class="inplay-on" *ngFor="let game of soccerGames">
+        <li class="inplay-off" *ngFor="let game of soccerGames">
           <a [routerLink]="['/match', game.sportid, game.eventid]">
             <dl>
               <dt>
                 <span class="game-live" style="display: flex;">game-live</span>
                 <span class="game-sportsbook" style="display: flex;">Premium Soccer</span>
-                <span class="time">{{ game.time }}</span>
+                <span class="time">{{'Tomorrow ' +  game.time }}</span>
                 <span class="game-E" style="display: flex;"><i></i>Soccer</span>
               </dt>
               <dd id="eventName">{{ game.matchname }}</dd>
@@ -79,13 +79,13 @@
         Tennis
       </h3>
       <ul class="highlight-list">
-        <li class="inplay-on" *ngFor="let game of tennisGames">
+        <li class="inplay-off" *ngFor="let game of tennisGames">
           <a [routerLink]="['/match', game.sportid, game.eventid]">
             <dl>
               <dt>
                 <span class="game-live" style="display: flex;">game-live</span>
                 <span class="game-sportsbook" style="display: flex;">Premium Tennis</span>
-                <span class="time">{{ game.time }}</span>
+                <span class="time">{{'Tomorrow ' +  game.time }}</span>
                 <span class="game-E" style="display: flex;"><i></i>Tennis</span>
               </dt>
               <dd id="eventName">{{ game.matchname }}</dd>

@@ -110,7 +110,7 @@
       <div  *ngFor="let seriesName of (groupedGames | sortCompetitionsByTime)" class="sortinglist-wrap filterbycomp" style="display: block;">
         <h4>{{ seriesName.key }}</h4>
         <ul id="highlightList" class="highlight-list" style="margin-bottom: 0;">
-          <li [ngClass]="isInPlay(game.opendate) ? 'inplay-on' : 'inplay-off'"   *ngFor="let game of seriesName.value"><a id="info">
+          <li [ngClass]="isInPlay(game.day) ? 'inplay-on' : 'inplay-off'"   *ngFor="let game of seriesName.value"><a id="info">
               <dl>
                 <dt><span id="streamingIcon" class="game-live" style="display: flex;">game-live</span><span
                     id="fancyBetIcon" class="game-fancy in-play" style="display: flex;">

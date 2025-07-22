@@ -61,6 +61,14 @@ export class MainpageComponent implements OnInit, OnDestroy {
     return map[id] || 'Unknown';
   }
 
+  isInPlay(opendate: string): boolean {
+    const gameTime = new Date(opendate).getTime();
+    const now = new Date().getTime();
+    console.log('Now:', new Date(now).toISOString());
+    console.log('Game:', new Date(gameTime).toISOString());
+
+    return now >= gameTime;
+  }
 
   buildIframeSrc() {
     const version = Math.floor(Math.random() * 10000);
@@ -103,7 +111,6 @@ export class MainpageComponent implements OnInit, OnDestroy {
 
         console.log('✅ Loaded match:', this.matches[0]);
 
-
         this.fancySocket.connect(this.eventId, [
           'Fancy/Auto',
           'BookM/Auto',
@@ -130,6 +137,11 @@ export class MainpageComponent implements OnInit, OnDestroy {
         console.error('❌ Error fetching  match data:', err);
       },
     });
+
+    this.matches = this.matches.map((match) => ({
+      ...match,
+      inPlay: this.isInPlay(match.day),
+    }));
   }
 
   setTab(tab: 'fancy' | 'premium') {

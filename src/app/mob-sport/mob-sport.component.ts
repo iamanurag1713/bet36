@@ -92,7 +92,7 @@ export class MobSportComponent {
       ...g,
       sportId,
     }));
-    this.groupGamesByCompetition(); // ✅ Group after games are loaded
+    this.groupGamesByCompetition();
   });
 }
 
@@ -113,6 +113,8 @@ export class MobSportComponent {
   isInPlay(opendate: string): boolean {
   const gameTime = new Date(opendate).getTime();
   const now = new Date().getTime();
+
+    console.log('📅 opendate:', opendate);
    console.log('Now:', new Date(now).toISOString());
   console.log('Game:', new Date(gameTime).toISOString());
 
@@ -121,15 +123,7 @@ export class MobSportComponent {
 // isInPlay(opendate: string): boolean {
 //   return new Date().getTime() >= new Date(opendate).getTime();
 // }
-formatTo12Hour(opendate: string): string {
-  const date = new Date(opendate);
 
-  return date.toLocaleTimeString('en-US', {
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: true,
-  });
-}
 
   handleResultClick() {
     if (this.auth.isLoggedIn) {
